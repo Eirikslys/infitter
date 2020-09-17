@@ -1,3 +1,6 @@
-@items
+<%  @items.each do |item| %>
+  <%=  link_to "Look at this item", item_path(item) %>
+  <br>
+<% end %>
 
-hei hei hei
+<%=  link_to "new item", new_item_path %>
