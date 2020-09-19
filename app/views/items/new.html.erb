@@ -1,5 +1,6 @@
 <%= simple_form_for @item do |f| %>
   <%= f.association :category %>
   <%= f.input :color %>
-  <%= f.button :submit %>
+  <%= f.file_field :image %> <br>
+  <%= f.button :submit, class: 'btn-primary' %>
 <% end %>
