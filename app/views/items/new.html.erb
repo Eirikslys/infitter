@@ -1,6 +1,6 @@
 <%= simple_form_for @item do |f| %>
   <%= f.association :category %>
   <%= f.input :color %>
-  <%= f.file_field :image %> <br>
+  <%= f.file_field :image, accept: "image/x-png,image/jpeg"  %> <br>
   <%= f.button :submit, class: 'btn-primary' %>
 <% end %>
