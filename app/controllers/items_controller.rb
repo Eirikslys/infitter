@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  # added this skipping to spare some logging in during developement, this needs to go later.
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   def index
     @items = Item.all
   end
