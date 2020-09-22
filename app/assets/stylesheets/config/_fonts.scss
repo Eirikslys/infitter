@@ -1,9 +1,16 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+// imported fonts for Infitter, vollkorn for general use Do Hyeon for main title
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Vollkorn&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+// work sans for smaller texts, button. vollkorn for larger texts and work sans for small buttons.
+$body-font: "Work Sans", sans-serif, 'Vollkorn', serif;
+$headers-font: 'Do Hyeon', sans-serif,  'Vollkorn', serif;
+
+// commented out the original fonts
+// $body-font: "Work Sans", "Helvetica", "sans-serif";
+// $headers-font: "Nunito", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

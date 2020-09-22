@@ -1,6 +1,13 @@
-<%  @items.each do |item| %>
-  <%=  link_to "Look at this item", item_path(item) %>
-  <br>
-<% end %>
 
-<%=  link_to "new item", new_item_path %>
+<div class= "container-gray">
+  <div class="button-rectangle">
+    <p>Wrong color. Pick again!</p>
+  </div>
+
+  <%  @items.each do |item| %>
+    <%=  link_to "Look at this item", item_path(item) %>
+    <br>
+  <% end %>
+
+  <%=  link_to "new item", new_item_path %>
+</div>

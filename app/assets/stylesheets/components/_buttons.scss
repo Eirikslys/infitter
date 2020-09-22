@@ -5,7 +5,13 @@
   width: 241px;
   height: 47px;
   color: #FFFFFF;
+  text-align: center;
+  text-justify: center;
+  padding: 8px;
+  font-family: 'Work Sans', sans-serif;
+
 }
+
 
 .button-circle-small {
   width: 129px;
@@ -13,13 +19,5 @@
   background: url(Maldives.png);
   filter: drop-shadow(10px 14px 20px rgba(0, 0, 0, 0.03));
   border-radius: 50%;
-  opacity:
-}
-
-.button-circle-large {
-  width: 297px;
-  height: 297px;
-  border-radius: 50%;
-  background: url(Maldives.png);
-  filter: drop-shadow(10px 14px 20px rgba(0, 0, 0, 0.03));
+  // opacity: 0
 }
