@@ -1,38 +1,17 @@
 
-      <div class="banner">
+<div class="banner">
+  <h1>Colors found!</h1>
+  <div class="container">
+    <div class="cards">
+    <% @colors.each do |color| %>
+      <div class="color-card btn" style="background-color: <%=color%>">
+      <%= color %></div>
+      <% end %>
+    </div>
+  </div>
+  <div class="guide-text">
+    <p>Tap a color to select</p>
+  </div>
+</div>
 
 
-          <h1>Colors found!</h1>
-          <p>Press a color to pick</p>
-
-
-        <div class="container">
-          <div class="cards">
-              <% @colors.each do |color| %>
-
-              <div class="color-card">
-              <%= color %></div>
-              <div class="color-card">
-              <%= color %></div>
-              <div class="color-card">
-              <%= color %></div>
-              <div class="color-card">
-              <%= color %></div>
-              <div class="color-card">
-              <%= color %></div>
-              <div class="color-card">
-              <%= color %></div>
-              <div class="color-card">
-              <%= color %></div>
-              <div class="color-card">
-              <%= color %></div>
-              <div class="color-card">
-              <%= color %></div>
-            <% end %>
-
-
-          <a class="btn btn-flat" href="#">Apply now</a>
-        </div>
-        <span class="dot"> </span>
-        </div>
-      </div>
