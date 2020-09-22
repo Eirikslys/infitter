@@ -1,6 +1,30 @@
-.navbar-lewagon {
+.navbar-infitter {
   background: #3B3A3A;
   margin-top: 2px;
+  height: 80px;
 
 }
 
+
+.nav-fontcolor {
+  color:white;
+  font-size: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+
+
+}
+
+.nav-fontcolor:hover {
+  color: white;
+
+}
+
+.mr-auto {
+  flex: 1;
+  margin: auto !important;
+  display: flex;
+  justify-content: space-between;
+
+}
