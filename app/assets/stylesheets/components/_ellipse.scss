@@ -1,17 +1,44 @@
 .wrapper-home {
-  height: calc(100vh - 30px);
+  height: calc(100vh - 80px);
   background: #3B3A3A;
 }
 
 .ellipse {
-position: relative;
-width: 297px;
-height: 297px;
-left: 42%;
-top: 230px;
-background: rgb(78, 212, 237);
-filter: drop-shadow(10px 14px 20px rgba(0, 0, 0, 0.03));
-border-radius: 100%;
+  position: relative;
+  width: 297px;
+  height: 297px;
+  left: 42%;
+  top: 230px;
+  background: rgb(78, 212, 237);
+  filter: drop-shadow(10px 14px 20px rgba(0, 0, 0, 0.03));
+  border-radius: 100%;
+  background: linear-gradient(351deg, #50d4f2, #c8e5ec, #adecfb, #e1ebee, #1685a7, #fd7b4a, #9afd4a, #fdf14a, #4a66fd, #fd634a, #fd4ad7, #7a0b19, #968385, #afec99, #39c8b7, #79eedf, #1406d2, #f2f707, #07f5f7, #f7072f, #d3b4d4, #d3b4d4, #732176, #a3d934, #b8fd9e, #07a396, #07a396);
+  background-size: 5400% 5400%;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  -o-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 19%}
+  50%{background-position:100% 82%}
+  100%{background-position:0% 19%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 19%}
+  50%{background-position:100% 82%}
+  100%{background-position:0% 19%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 19%}
+  50%{background-position:100% 82%}
+  100%{background-position:0% 19%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 19%}
+  50%{background-position:100% 82%}
+  100%{background-position:0% 19%}
 }
 
 .ellipse .fas {
