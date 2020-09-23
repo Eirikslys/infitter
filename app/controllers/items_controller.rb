@@ -17,6 +17,17 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    raise
+    @item.update!(item_params)
+    redirect_to item_path(@item)
+  end
+
   def create
     @item = Item.new(item_params)
     @item.user = current_user
@@ -30,6 +41,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:category_id, :color, :image)
+    params.require(:item).permit(:category_id, :color, :image, :favorite?, :name)
   end
 end
