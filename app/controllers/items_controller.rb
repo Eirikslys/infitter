@@ -23,7 +23,6 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-    raise
     @item.update!(item_params)
     redirect_to item_path(@item)
   end
@@ -41,6 +40,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:category_id, :color, :image, :favorite?, :name)
+    params.require(:item).permit(:category_id, :color, :image, :favorite, :name)
   end
 end

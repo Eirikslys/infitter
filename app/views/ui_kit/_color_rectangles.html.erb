@@ -20,3 +20,12 @@
 <div class="color-empty">
   <i class="fi-xtluxl-plus-thin plus"></i>
 </div>
+
+<!-- boxes with the code to inherit the color from an instance of the item class.
+Some styling needed to make the heart stick to the top right-->
+
+<div class="color" style="background-color: <%= @item.color %>">
+  <%= button_tag class: "heartbutton", style: "background-color: #{@item.color}", type: 'submit' do %>
+    <i class="heart fas fa-heart" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
+  <% end %>
+</div>
