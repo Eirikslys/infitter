@@ -1,0 +1,48 @@
+.banner {
+  background-color: #3B3A3A;
+  background-size: cover;
+  height: calc(100vh - 80px);
+  padding: 0px;
+}
+
+h1 {
+color: white;
+padding-left: 30px;
+padding-top: 45px;
+}
+
+p {
+color: white;
+opacity: 70%;
+}
+
+.guide-text {
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+// javascript color-selector
+.color-selected .color-card {
+  display: none;
+}
+
+.color-selected .color-card.selected {
+  display: block;
+}
+
+.container .button-rectangle {
+  display: none;
+}
+
+.color-selected .button-rectangle {
+  display: block;
+  justify-content: center;
+}
+
+// size of color-circle when clicked
+.selected {
+  width: 300px;
+  height: 300px;
+  display: block;
+}

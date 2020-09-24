@@ -31,4 +31,10 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  document.querySelectorAll(".color-card").forEach((card) => {
+    card.addEventListener("click", (event) => {
+      event.currentTarget.classList.toggle("selected");
+      event.currentTarget.parentElement.parentElement.classList.toggle("color-selected");
+    });
+  });
 });
