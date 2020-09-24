@@ -1,18 +1,17 @@
 <!-- full heart -->
-<div class="color">
+<div class="color" style="background-color: <%= @item.color %>">
   <% if @item.favorite? %>
     <%= simple_form_for @item do |f| %>
-      <%= f.hidden_field :favorite?, :input_html => { :value => false}  %>
-      <%= f.input :name %>
-      <%= button_tag type: 'submit' do %>
-        <i class="heart fas fa-heart" aria-hidden="true"></i>
+      <%= f.hidden_field :favorite, :input_html => { :value => "false" }  %>
+      <%= button_tag class: "heartbutton", style: "background-color: #{@item.color}", type: 'submit' do %>
+        <i class="heart fas fa-heart" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
       <% end %>
     <% end %>
   <% else %>
     <%= simple_form_for @item do |f| %>
-      <%= f.hidden_field :favorite?, :input_html => { :value => true} %>
-      <%= button_tag type: 'submit' do %>
-        <i class="heart far fa-heart" aria-hidden="true"></i>
+      <%= f.hidden_field :favorite, :input_html => { :value => "true" } %>
+      <%= button_tag class: "heartbutton", style: "background-color: #{@item.color}", type: 'submit' do %>
+        <i class="heart far fa-heart" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
       <% end %>
     <% end %>
   <% end %>
