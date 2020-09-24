@@ -2,29 +2,38 @@
   background: #3B3A3A;
   margin-top: 2px;
   height: 80px;
+  position: static;
+
 
 }
 
 
 .nav-fontcolor {
   color:white;
-  font-size: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
-
-
+  font-size: 25px;
+  line-height: 3;
+  padding-right: 50px;
 
 }
+
+
 
 .nav-fontcolor:hover {
   color: white;
+  text-decoration: none;
 
 }
+
 
 .mr-auto {
   flex: 1;
-  margin: auto !important;
+  // margin: auto !important;
   display: flex;
   justify-content: space-between;
+  // width: 100%;
+  font-family: 'Vollkorn';
+  list-style: none;
 
 }
+
+

@@ -1,12 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-infitter">
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+<div class="navbar-infitter">
+  <div class="nav-wrapper">
+    <ul class="mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", "#", class: "nav-link" %>
@@ -14,16 +8,15 @@
 
         <li class="nav-item dropdown">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
         </li>
       </ul>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Sign up", new_user_session_path, class: "nav-fontcolor" %>
-          </li>
-          <li class="nav-item">
+            <%= link_to "Sign up", new_user_session_path, class: "nav-fontcolor" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "My colors", new_user_session_path, class: "nav-fontcolor" %>
-          </li>
+        </li>
       <% end %>
     </ul>
   </div>
