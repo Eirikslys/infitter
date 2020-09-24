@@ -20,3 +20,29 @@ opacity: 70%;
   text-align: center;
   padding-top: 30px;
 }
+
+
+// javascript color-selector
+.color-selected .color-card {
+  display: none;
+}
+
+.color-selected .color-card.selected {
+  display: block;
+}
+
+.container .button-rectangle {
+  display: none;
+}
+
+.color-selected .button-rectangle {
+  display: block;
+  justify-content: center;
+}
+
+// size of color-circle when clicked
+.selected {
+  width: 300px;
+  height: 300px;
+  display: block;
+}
