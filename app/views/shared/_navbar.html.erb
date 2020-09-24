@@ -1,13 +1,17 @@
 <div class="navbar-infitter">
   <div class="nav-wrapper">
+    <% if request.path != "/" %>
+      <div class="classguy">
+        <%= link_to root_path, class: "camera-button" do %>
+          <i class="fas fa-camera fa-2x" id="cam-btn"></i>
+        <%end %>
+      </div>
+    <% end %>
     <ul class="mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
           <!-- this conditonal makes sure the home button is not rendered if the user is
           currently on the home page -->
-          <% if request.path != "/" %>
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          <% end %>
           <%= link_to "My colors", items_path, class: "nav-link" %>
         </li>
 
