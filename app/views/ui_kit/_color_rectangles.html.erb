@@ -1,0 +1,31 @@
+<!-- some code needed to make it display the correct heart depending on the items favourite value-->
+
+<!-- full heart -->
+<div class="color">
+  <i class="heart fas fa-heart"></i>
+</div>
+
+<!-- empty heart -->
+<div class="color">
+  <i class="heart far fa-heart"></i>
+</div>
+
+<!-- no heart -->
+
+<div class="color">
+
+</div>
+
+<!-- empty color boxes with the plus symbol -->
+<div class="color-empty">
+  <i class="fi-xtluxl-plus-thin plus"></i>
+</div>
+
+<!-- boxes with the code to inherit the color from an instance of the item class.
+Some styling needed to make the heart stick to the top right-->
+
+<div class="color" style="background-color: <%= @item.color %>">
+  <%= button_tag class: "heartbutton", style: "background-color: #{@item.color}", type: 'submit' do %>
+    <i class="heart fas fa-heart" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
+  <% end %>
+</div>
