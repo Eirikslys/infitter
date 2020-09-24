@@ -3,7 +3,12 @@
     <ul class="mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <!-- this conditonal makes sure the home button is not rendered if the user is
+          currently on the home page -->
+          <% if request.path != "/" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          <% end %>
+          <%= link_to "My colors", items_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item dropdown">
