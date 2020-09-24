@@ -1,20 +1,16 @@
 
-<div class="banner">
-  <h1>Colors found!</h1>
-  <div class="container">
+<h1>Colors found!</h1>
+<div class="color-picker">
     <div class="cards">
     <% @colors.each do |color| %>
       <div class="color-card btn" style="background-color: <%=color%>">
       <%= color %></div>
       <% end %>
     </div>
-    <button class="button-rectangle btn"> Wrong color. Pick again! </button>
-    <button class="button-rectangle btn"> Match this item with something in your wardrobe </button>
-
-  </div>
+      <button class="hidden button-rectangle btn"> Wrong color. Pick again! </button>
+      <button class="hidden button-rectangle btn"> Match this item with something in your wardrobe </button>
+</div>
   <div class="guide-text">
     <p>Tap a color to select</p>
   </div>
-</div>
-
 
