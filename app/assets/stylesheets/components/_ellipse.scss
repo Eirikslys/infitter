@@ -1,14 +1,27 @@
 .wrapper-home {
   height: calc(100vh - 80px);
   background: #3B3A3A;
+  display: grid;
+  grid-template-columns: repeat(auto-fit 300px);
+  grid-template-rows: repeat (2, 1fr);
+
+  // grid-gap:20px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+
+
+
 }
 
 .ellipse {
   position: relative;
   width: 297px;
   height: 297px;
-  left: 42%;
-  top: 230px;
   background: rgb(78, 212, 237);
   filter: drop-shadow(10px 14px 20px rgba(0, 0, 0, 0.03));
   border-radius: 100%;
@@ -44,23 +57,26 @@
 .ellipse .fas {
   font-size: 100px;
   color:white;
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  line-height: 3;
+
 }
 
 
 .ellipse .fas .clickableAwesomeFont {
   cursor: pointer
+
 }
 
-  .wrapper-home h1{
+.wrapper-home h1{
  font-family: 'Do Hyeon';
  font-size: 64px;
  line-height: 80px;
  text-align: center;
  color: #FFFFFF;
- padding-top: 50px;
+ padding-right: 40px;
 }
 
 .wrapper-home h2 {
@@ -71,6 +87,9 @@ font-weight: normal;
 font-size: 30px;
 line-height: 42px;
 text-align: center;
-margin-top: 350px;
+// margin-top: 350px;
 color: #FFFFFF;
+padding-left: 50px;
+padding-right: 50px;
+
 }
