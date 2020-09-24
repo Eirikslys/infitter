@@ -1,0 +1,51 @@
+.wrapper-form {
+ height: calc(100vh - 80px);
+ background: #3B3A3A;
+
+}
+
+.wrapper-form h2 {
+  position: absolute;
+  left: 15.2%;
+  right: 15.2%;
+  top: 14.41%;
+  bottom: 80.3%;
+  font-family: Vollkorn;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.form-inputs {
+  margin: 0 auto;
+  width: 284px;
+  padding-top: 204px;
+
+}
+
+
+.form-inputs input {
+  background: #F3F3F3;
+  border: 1px solid #000000;
+  left: 46px;
+  radius: 6px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-inputs label {
+  font-family: Vollkorn;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+
