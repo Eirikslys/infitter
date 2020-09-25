@@ -7,21 +7,32 @@
 
 }
 
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
 
-.nav-fontcolor {
-  color:white;
-  font-size: 25px;
-  line-height: 3;
-  padding-right: 50px;
+// .nav-fontcolor {
+//   color: white;
+//   font-size: 25px;
+//   line-height: 3;
+//   padding-right: 50px;
 
+// }
+
+.classguy {
+  position: relative;
+  width: 100vw;
 }
 
 
+// .nav-fontcolor:hover {
+//   color: white;
+//   text-decoration: none;
 
-.nav-fontcolor:hover {
-  color: white;
-  text-decoration: none;
+// }
 
+.navbar-wrapper {
 }
 
 

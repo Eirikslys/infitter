@@ -1,18 +1,28 @@
 <div class="navbar-infitter">
   <div class="nav-wrapper">
+  <!-- this conditonal makes sure the home button is not rendered if the user is
+  currently on the home page -->
+    <% if request.path != "/" %>
+      <div class="classguy">
+        <%= link_to root_path, class: "camera-button" do %>
+          <i class="fas fa-camera fa-2x" id="cam-btn"></i>
+        <%end %>
+      </div>
+    <% end %>
     <ul class="mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <p><%= link_to "My colors", items_path, class: "nav-link" %></p>
+          <%= link_to "My colors", items_path, class: "nav-link" %>
         </li>
 
-        <li class="nav-item dropdown">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <li class="nav-item">
+            <p><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link"  %></p>
         </li>
       </ul>
       <% else %>
         <li class="nav-item">
-            <%= link_to "Sign up", new_user_session_path, class: "nav-fontcolor" %>
+            <p><%= link_to "Sign up/Log in", new_user_session_path, class: "nav-link"%></p>
         </li>
         <li class="nav-item">
           <%= link_to "My colors", color_path, class: "nav-fontcolor" %>

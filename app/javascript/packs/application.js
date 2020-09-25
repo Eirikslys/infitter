@@ -35,6 +35,12 @@ document.addEventListener('turbolinks:load', () => {
     card.addEventListener("click", (event) => {
       event.currentTarget.classList.toggle("selected");
       event.currentTarget.parentElement.parentElement.classList.toggle("color-selected");
+      const buttons = document.querySelectorAll(".button-rectangle");
+      console.log(buttons)
+      buttons.forEach((button) => {
+        console.log(button)
+      button.classList.toggle("hidden");
+    });
     });
   });
 });
