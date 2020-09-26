@@ -19,8 +19,9 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
-
-    <%= render 'shared/navbar' %>
+    <% if request.path != "/users/sign_up" %>
+      <%= render 'shared/navbar' %>
+    <% end %>
   </body>
 
 </html>
