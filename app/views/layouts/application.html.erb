@@ -15,13 +15,16 @@
   </head>
 
   <body style="background-color: #3C3A3A;">
-
+    <div class="page-container">
     <%= render 'shared/flashes' %>
 
-    <%= yield %>
+    <main id="main-content">
+      <%= yield %>
+    </main>
     <% if request.path != "/users/sign_up" %>
       <%= render 'shared/navbar' %>
     <% end %>
+    </div>
   </body>
 
 </html>
