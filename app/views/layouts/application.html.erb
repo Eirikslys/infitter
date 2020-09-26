@@ -21,9 +21,7 @@
     <main id="main-content">
       <%= yield %>
     </main>
-    <% if request.path != "/users/sign_up" %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+    <%= render "shared/navbar"  unless request.path == "/users/sign_up"  %>
     </div>
   </body>
 
