@@ -1,0 +1,23 @@
+<div class="wrapper-wardrobe">
+  <h2>Wardrobe</h2>
+    <div class="cards-wardrobe">
+      <% @item.color %>
+      <div class="color-ellipse" style="background-color: <% @item.color %>">
+        <% @item.color %>
+        <i class="fas fa-tshirt fa-3x"></i>
+      </div>
+      <div class="color-ellipse">
+        <%= link_to items_path(category:"tops")do %>
+        <i class="fas fa-tshirt fa-3x"></i>
+        <% end %>
+      </div>
+       <div class="color-ellipse">
+        <%= link_to items_path(category:"shoes")do %>
+        <i class="fas fa-tshirt fa-3x"></i>
+        <% end %>
+      </div>
+       <div class="color-ellipse">
+        <i class="fas fa-tshirt fa-3x"></i>
+      </div>
+    </div>
+</div>

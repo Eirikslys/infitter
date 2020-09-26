@@ -4,6 +4,10 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    if params[:category]
+      category = Category.find_by_name(params[:category])
+      @items = @items.where(category:category)
+    end
   end
 
   def show

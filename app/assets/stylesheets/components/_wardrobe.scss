@@ -1,0 +1,44 @@
+.wrapper-wardrobe {
+height: calc(100vh - 80px);
+background: #EFAE46;
+
+}
+
+
+.wrapper-wardrobe h2 {
+  left: 0%;
+  right: -39.13%;
+  top: 0%;
+  bottom: -28.57%;
+  font-family: Vollkorn;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 108px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+.cards-wardrobe {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 38px;
+  grid-row-gap: 34px;
+}
+
+
+.color-ellipse {
+  border-radius: 50%;
+  height: 131px;
+  width: 131px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  justify-content: center;
+  margin: 7px;
+  display: flex;
+
+}
+
+
