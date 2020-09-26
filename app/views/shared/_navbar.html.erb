@@ -4,7 +4,7 @@
   currently on the home page -->
     <% if request.path != "/" %>
       <div class="classguy">
-        <%= link_to root_path, class: "camera-button" do %>
+        <%= link_to new_item_path, class: "camera-button" do %>
           <i class="fas fa-camera fa-2x" id="cam-btn"></i>
         <%end %>
       </div>
