@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @colors = Item.limit(9).pluck(:color)
     @item = Item.new
   end
 
@@ -33,8 +34,15 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to items_path
     else
+      @colors = Item.limit(9).pluck(:color)
       render :new
+
     end
+  end
+
+   def color
+    @item = Item.find(params[:id])
+
   end
 
   private
