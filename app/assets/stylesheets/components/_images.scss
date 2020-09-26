@@ -1,0 +1,13 @@
+// code for the image images on the show page
+.image-item {
+  margin-top: 20px;
+  position: absolute;
+  width: 286px;
+  height: 477px;
+
+  box-shadow: 7px 10px 4px 7px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 15px;
+  object-fit: cover;
+
+}
