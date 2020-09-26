@@ -1,10 +1,14 @@
 .heart {
   color: white;
   font-size: 2.5em;
+  text-decoration:none;
+  cursor:pointer;
+
 }
 
-.hjerte {
-  color: inherit;
+.heart:hover {
+  text-decoration:none;
+  cursor:pointer;
 }
 
 .heartbutton {

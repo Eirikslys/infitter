@@ -17,7 +17,13 @@ class ItemsController < ApplicationController
   def destroy
   end
 
+  # def wardrobe
+  #   @items = Item.find(params[:color])
+  #   @items = @items.find(params[:category])
+  # end
+
   def new
+    @colors = Item.limit(9).pluck(:color)
     @item = Item.new
   end
 
@@ -37,8 +43,15 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to items_path
     else
+      @colors = Item.limit(9).pluck(:color)
       render :new
+
     end
+  end
+
+   def color
+    @item = Item.find(params[:id])
+
   end
 
   private

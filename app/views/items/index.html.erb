@@ -1,13 +1,12 @@
-
 <div class= "container-gray">
-  <div class="color-empty">
-    <i class="fi-xtluxl-plus-thin plus"></i>
+  <h2 id="mycolors">My colors</h2>
+  <div class="items-index">
+    <%  @items.each do |item| %>
+      <%=  link_to item_path(item), class: "no-underline" do %>
+        <div class="color" style="background-color: <%= item.color %>">
+          <i class="heart far fa-heart"></i>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-
-  <%  @items.each do |item| %>
-    <%=  link_to "Look at this item", item_path(item) %>
-    <br>
-  <% end %>
-
-  <%=  link_to "new item", new_item_path %>
 </div>
