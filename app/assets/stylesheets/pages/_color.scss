@@ -42,7 +42,10 @@
   text-align: center;
   width: 300px;
   margin: 0 auto;
+}
 
+.color-picker input[type=radio] {
+  display: none;
 }
 
 .my_a_tag {

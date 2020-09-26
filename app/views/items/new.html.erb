@@ -1,6 +1,21 @@
 <%= simple_form_for @item do |f| %>
   <%= f.association :category %>
-  <%= f.input :color %>
-  <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %> <br>
-  <%= f.button :submit, class: 'btn-primary' %>
+
+  <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
+
+  <h1>Colors found!</h1>
+  <div class="color-picker">
+      <div class="cards">
+        <% @colors.each do |color| %>
+         <%=radio_button_tag "item[color]", color%>
+         <%= label_tag "item_color_#{color}", class: "color-card btn", style: "background-color: #{color}" do %>
+          <%= color %>
+        <% end %>
+     <% end %>
+      </div>
+        <button type="submit" class="hidden button-rectangle btn"> Match this item with something in your wardrobe </button>
+  </div>
+    <div class="guide-text">
+      <p>Tap a color to select</p>
+    </div>
 <% end %>
