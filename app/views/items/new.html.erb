@@ -1,25 +1,28 @@
 <div class="container pt-5">
   <div class="form-wrapper pt-5" style="width: 400px; margin: 0 auto;">
-<%= simple_form_for @item do |f| %>
-  <%= f.association :category %>
+    <%= simple_form_for @item do |f| %>
+      <%= f.association :category %>
 
-  <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
+      <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
 
-  <h1>Colors found!</h1>
-  <div class="color-picker">
-      <div class="cards">
-        <% @colors.each do |color| %>
-         <%=radio_button_tag "item[color]", color%>
-         <%= label_tag "item_color_#{color}", class: "color-card btn", style: "background-color: #{color}" do %>
-          <%= color %>
-        <% end %>
-     <% end %>
+      <div class="color-picker-wrapper hidden">
+
+        <h1>Colors found!</h1>
+        <div class="color-picker">
+          <div class="cards">
+            <% @colors.each do |color| %>
+             <%=radio_button_tag "item[color]", color%>
+             <%= label_tag "item_color_#{color}", class: "color-card btn", style: "background-color: #{color}" do %>
+              <%= color %>
+            <% end %>
+          <% end %>
+          </div>
+          <button type="submit" class="hidden button-rectangle btn"> Match this item with something in your wardrobe </button>
+        </div>
+        <div class="guide-text">
+          <p>Tap a color to select</p>
+        </div>
       </div>
-        <button type="submit" class="hidden button-rectangle btn"> Match this item with something in your wardrobe </button>
-  </div>
-    <div class="guide-text">
-      <p>Tap a color to select</p>
-    </div>
-<% end %>
+    <% end %>
   </div>
 </div>

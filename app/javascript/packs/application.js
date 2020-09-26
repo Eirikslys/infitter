@@ -43,4 +43,11 @@ document.addEventListener('turbolinks:load', () => {
     });
     });
   });
+
+  document.querySelectorAll("#camera").forEach((input) => {
+    input.addEventListener("change", (event) => {
+      console.log(event)
+      document.querySelector(".color-picker-wrapper").classList.toggle("hidden");
+    });
+ });
 });
