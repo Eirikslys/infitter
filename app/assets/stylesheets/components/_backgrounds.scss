@@ -1,3 +1,12 @@
 .container-gray {
   background-color: #3C3A3A;
 }
+
+// container for the show pages
+.container-adaptive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+}
