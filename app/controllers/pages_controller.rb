@@ -11,4 +11,9 @@ class PagesController < ApplicationController
   def wardrobe
     @item = Item.last
   end
+
+  def category
+    @item = Item.last
+  end
+
 end

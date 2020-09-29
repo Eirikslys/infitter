@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     end
   end
    get '/wardrobe', to: 'pages#wardrobe'
+   get '/category', to: 'pages#category'
 end
