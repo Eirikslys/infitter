@@ -10,5 +10,8 @@ class PagesController < ApplicationController
 
   def wardrobe
     @item = Item.last
+    if params[:color]
+      @color = params[:color]
+    end
   end
 end

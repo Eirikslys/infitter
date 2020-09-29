@@ -1,12 +1,14 @@
 <div class= "container-gray">
   <h2 id="mycolors">My colors</h2>
   <div class="items-index">
-    <%  @items.each do |item| %>
-      <%=  link_to item_path(item), class: "no-underline" do %>
-        <div class="color" style="background-color: <%= item.color %>">
-          <i class="heart far fa-heart"></i>
-        </div>
-      <% end %>
-    <% end %>
+    <% if @category %>
+    <%= @items.first.color %>
+  <% elsif @color %>
+  <%= render "categories" %>
+  <% else %>
+  <%= render "colors" %>
+  <% end %>
   </div>
 </div>
+
+<!-- link_to item_path(item) -->

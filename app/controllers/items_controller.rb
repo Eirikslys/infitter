@@ -4,14 +4,22 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @color = params[:color]
     if params[:category]
-      category = Category.find_by_name(params[:category])
-      @items = @items.where(category:category)
+      @category = Category.find_by_name(params[:category])
+      @items = @items.where(category:@category)
+    end
+    if @color
+      @items = @items.where(color:@color)
     end
   end
 
   def show
-  @item = Item.find(params[:id])
+    if params[:color]
+      @color = params[:color]
+      category = Category.find_by_name(params[:category])
+      @item = Item.where(color:@color, category:category)
+    end
   end
 
   def destroy

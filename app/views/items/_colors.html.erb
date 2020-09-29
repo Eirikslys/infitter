@@ -1,0 +1,7 @@
+<%  @items.each do |item| %>
+      <%=  link_to items_path(color:item.color), class: "no-underline" do %>
+        <div class="color" style="background-color: <%= item.color %>">
+          <i class="heart far fa-heart"></i>
+        </div>
+      <% end %>
+<% end %>
