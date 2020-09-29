@@ -42,18 +42,21 @@ document.addEventListener("turbolinks:load", () => {
           const hexCodes = swatches.map((swatch) => swatch.getHex());
           console.log(hexCodes);
 
+          const element = document.querySelector(".color-picker .cards");
+          element.innerHTML = "";
+
           hexCodes.forEach((color) => {
+
             const colorInput = `<label class="color-card btn" style="background-color: ${color}" for="item_color_yellow">
               ${color}
             </label>
             <input type="radio" name="item[color]" id="item_color_black" value="${color}">`;
-            const element = document.querySelector(".color-picker .cards");
             element.insertAdjacentHTML("beforeend", colorInput);
           });
           document.querySelectorAll(".color-card").forEach((card) => {
             card.addEventListener("click", (event) => {
               event.currentTarget.classList.toggle("selected");
-              event.currentTarget.parentElement.parentElement.classList.toggle(
+              event.currentTarget.parentElement.parentElement.classList.add(
                 "color-selected"
               );
               const buttons = document.querySelectorAll(".button-rectangle");
@@ -69,7 +72,7 @@ document.addEventListener("turbolinks:load", () => {
       console.log(event);
       document
         .querySelector(".color-picker-wrapper")
-        .classList.toggle("hidden");
+        .classList.remove("hidden");
     });
   });
 });
