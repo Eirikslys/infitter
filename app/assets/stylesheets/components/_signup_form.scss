@@ -84,7 +84,7 @@
 }
 
 
-.small-box {
+.small-box  {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -93,5 +93,91 @@
 }
 
 
+$height: 60px;
+$trs-time: .4s;
 
+button {
+    display: block;
+    height: 60px;
+    padding: 0;
+    width: 191px;
+    background: none;
+    margin: auto;
+    border: 2px solid #1ECD97;
+    font-size: 18px;
+    font-family: "Lato";
+    color: #1ECD97;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 30px;
+    transition: background $trs-time, color $trs-time, font-size .05s, width $trs-time, border $trs-time;
+    &:hover{
+      background: #1ECD97;
+      color: white;
+    }
+  }
+  .checkmark{
+    position: absolute;
+    top: 11px;
+    display: none;
+    left: 191px/2 - 24px;
+    scale: 0.6;
+  }
+  .circle-icon {
+    transform: rotate(270deg);
+    // rotate:270deg); */
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    display: none;
+
+    .fill_circle{
+      animation: fill-stroke 2s .4s linear forwards;
+
+    }
+    .circle_2{
+      stroke-dasharray: 0 200;
+    }
+
+  }
+  .circle{
+    width: $height;
+    border: 3px solid #c3c3c3;
+    /* border: none; */
+    &:hover{
+      background: none;
+    }
+  }
+  .filled{
+    background: #1ECD97;
+    color: white;
+    line-height: $height;
+    font-size: 160%;
+}
+
+@keyframes fill-stroke{
+  0%{
+    stroke-dasharray: 0 200;
+  }
+  20%{
+    stroke-dasharray: 20 200;
+  }
+  40%{
+    stroke-dasharray: 30 200;
+  }
+  50%{
+    stroke-dasharray: 90 200;
+  }
+  70%{
+    stroke-dasharray: 120 200;
+  }
+  90%{
+    stroke-dasharray: 140 200;
+  }
+  100%{
+    stroke-dasharray: 182 200;
+  }
+}
 
