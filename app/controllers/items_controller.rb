@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   # added this skipping to spare some logging in during developement, this needs to go later.
   skip_before_action :authenticate_user!, only: [ :index, :show ]
+   include Pagy::Backend
 
   def index
     @items = Item.all
@@ -12,6 +13,8 @@ class ItemsController < ApplicationController
     if @color
       @items = @items.where(color:@color)
     end
+     @pagy, @records = pagy(@items)
+     @item = @records.last
   end
 
   def show

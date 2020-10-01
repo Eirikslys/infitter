@@ -1,14 +1,7 @@
-<div class= "container-gray">
-  <h2 id="mycolors">My colors</h2>
-  <div class="items-index">
-    <% if @category %>
-    <%= @items.first.color %>
-  <% elsif @color %>
+<% if @category %>
+  <%= render "carousel"  %>
+<% elsif @color %>
   <%= render "categories" %>
-  <% else %>
+<% else %>
   <%= render "colors" %>
-  <% end %>
-  </div>
-</div>
-
-<!-- link_to item_path(item) -->
+<% end %>
