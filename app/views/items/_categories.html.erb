@@ -2,7 +2,9 @@
   <h2>Wardrobe</h2>
     <div class="cards-wardrobe">
       <div class="color-ellipse" >
-        <i class="fas fa-tshirt fa-3x"></i>
+        <%= link_to items_path(category:"shoes", color:@color), class: "no-underline" do %>
+        <i class="fas fa-shoe-prints fa-3x"></i>
+        <% end %>
       </div>
       <div class="color-ellipse">
         <%= link_to items_path(category:"tops", color:@color)do %>
@@ -10,12 +12,14 @@
         <% end %>
       </div>
        <div class="color-ellipse">
-        <%= link_to items_path(category:"shoes")do %>
-        <i class="fas fa-tshirt fa-3x"></i>
+        <%= link_to items_path(category:"bottoms", color:@color)do %>
+        <i class="fas fa-socks fa-3x"></i>
         <% end %>
       </div>
       <div class="color-ellipse">
-        <i class="fas fa-tshirt fa-3x"></i>
+        <%= link_to items_path(category:"accessories", color:@color)do %>
+        <i class="fas fa-hat-cowboy fa-3x"></i>
+        <% end %>
       </div>
     </div>
 </div>
