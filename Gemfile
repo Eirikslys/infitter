@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+gem 'pagy', '~> 3.5' # omit patch digit and use the latest if possible
+
 # Gives us more validation for the images
 gem 'activestorage-validator'
 # Enables cloud image storage

@@ -1,13 +1,11 @@
 <div class="wrapper-wardrobe" style="background-color: <%= @color %>">
   <h2>Wardrobe</h2>
     <div class="cards-wardrobe">
-      <% @item.color %>
       <div class="color-ellipse" >
-        <% @item.color %>
         <i class="fas fa-tshirt fa-3x"></i>
       </div>
       <div class="color-ellipse">
-        <%= link_to item_path(category:"tops", color:@color)do %>
+        <%= link_to items_path(category:"tops", color:@color)do %>
         <i class="fas fa-tshirt fa-3x"></i>
         <% end %>
       </div>

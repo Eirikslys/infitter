@@ -1,17 +1,28 @@
 class ItemsController < ApplicationController
   # added this skipping to spare some logging in during developement, this needs to go later.
   skip_before_action :authenticate_user!, only: [ :index, :show ]
+   include Pagy::Backend
 
   def index
     @items = Item.all
+    @color = params[:color]
     if params[:category]
-      category = Category.find_by_name(params[:category])
-      @items = @items.where(category:category)
+      @category = Category.find_by_name(params[:category])
+      @items = @items.where(category:@category)
     end
+    if @color
+      @items = @items.where(color:@color)
+    end
+     @pagy, @records = pagy(@items)
+     @item = @records.last
   end
 
   def show
-  @item = Item.find(params[:id])
+    if params[:color]
+      @color = params[:color]
+      category = Category.find_by_name(params[:category])
+      @item = Item.where(color:@color, category:category)
+    end
   end
 
   def destroy
