@@ -52,7 +52,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user = current_user
     if @item.save
-      redirect_to items_path
+      redirect_to category_path
     else
       @colors = Item.limit(9).pluck(:color)
       render :new
