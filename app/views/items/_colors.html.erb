@@ -1,9 +1,9 @@
 <div class= "container-gray">
   <h2 id="mycolors">My colors</h2>
   <div class="items-index">
-<%  @items.each do |item| %>
-      <%=  link_to items_path(color:item.color), class: "no-underline" do %>
-        <div class="color" style="background-color: <%= item.color %>">
+<%  @items.distinct(:color).pluck(:color).each do |color| %>
+      <%=  link_to items_path(color:color), class: "no-underline" do %>
+        <div class="color" style="background-color: <%=color%>">
           <i class="heart far fa-heart"></i>
         </div>
       <% end %>
