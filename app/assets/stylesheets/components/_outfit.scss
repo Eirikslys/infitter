@@ -1,0 +1,38 @@
+.outfit {
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  height: 100vh;
+
+}
+
+#component1 {
+  scroll-snap-align: start;
+    height: 100vh;
+
+
+}
+
+#component2 {
+  scroll-snap-align: start;
+    height: 100vh;
+
+
+}
+
+#component3 {
+  scroll-snap-align: start;
+    height: 100vh;
+
+
+}
+
+#component4 {
+  scroll-snap-align: start;
+  height: 100vh;
+
+}
+
+// html, body {
+//   overflow: hidden;
+
+// }

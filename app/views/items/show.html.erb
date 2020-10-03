@@ -1,10 +1,14 @@
-<!-- see components/_backgrounds.scss for the rules for this container-->
-<div class="container-adaptive" style="background-color: <%= @item.color %>">
-  <!-- rules for this heart is in _heart.scss -->
-  <% if @item.favorite %>
-    <i class="heart fas fa-heart"></i>
-  <% else %>
-    <i class="heart far fa-heart"></i>
-  <% end %>
-  <%= image_tag @item.image, class: "image-item"%>
-</div>
+<% if @outfit %>
+  <%= render "outfit"  %>
+<% else %>
+  <!-- see components/_backgrounds.scss for the rules for this container-->
+  <div class="container-adaptive" style="background-color: <%= @item.color %>">
+    <!-- rules for this heart is in _heart.scss -->
+    <% if @item.favorite %>
+      <i class="heart fas fa-heart"></i>
+    <% else %>
+      <i class="heart far fa-heart"></i>
+    <% end %>
+    <%= image_tag @item.image, class: "image-item"%>
+  </div>
+<% end %>
