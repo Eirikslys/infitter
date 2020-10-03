@@ -13,11 +13,16 @@
     padding: 20px;
     width: 80%;
     margin: 0 auto;
-    padding-top: 120px;
+    padding-top: 100px;
   }
 
   .rails-default-error-page p {
     opacity: 70%;
+  }
+
+  i {
+    color:#3C3A3A;
+    font-size: 280px;
   }
 
 
@@ -61,15 +66,17 @@
   100%{background-position:0% 19%}
 }
   </style>
-</head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /></head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
     <div class="ellipse ">
-        <h1>500</h1>
+      <!-- <h1>500</h1> -->
+      <i class="fas fa-exclamation-circle"></i>
     </div>
-      <p>Oh no, something went wrong...</p>
-    <p>If you are the application owner check the logs for more information.</p>
-</body>
+    <h1>Error code: 500</h1>
+      <p>It is me, not you...</p>
+<!--       <p>We are currently experiencing an internal server problem.</p>
+ --></body>
 </html>
 
