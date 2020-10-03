@@ -5,8 +5,9 @@
     <% else %>
       <i class="heart far fa-heart"></i>
     <% end %>
-    <%= image_tag @outfit[3].image, class: "image-item"%>
+    <%= image_tag @outfit[3].image, class: "image-carousel"%>
   </div>
+
 
   <div class="container-adaptive" id="component2" dir="ltr" style="background-color: <%= @outfit[1].color %>">
     <% if @outfit[1].favorite %>
@@ -14,8 +15,9 @@
     <% else %>
       <i class="heart far fa-heart"></i>
     <% end %>
-    <%= image_tag @outfit[1].image, class: "image-item"%>
+    <%= image_tag @outfit[1].image, class: "image-carousel"%>
   </div>
+
 
   <div class="container-adaptive" id="component3" style="background-color: <%= @outfit[2].color %>">
     <% if @outfit[2].favorite %>
@@ -23,8 +25,9 @@
     <% else %>
       <i class="heart far fa-heart"></i>
     <% end %>
-    <%= image_tag @outfit[2].image, class: "image-item"%>
+    <%= image_tag @outfit[2].image, class: "image-carousel"%>
   </div>
+
 
   <div class="container-adaptive" id="component4" style="background-color: <%= @outfit[0].color %>">
     <% if @outfit[0].favorite %>
@@ -32,6 +35,7 @@
     <% else %>
       <i class="heart far fa-heart"></i>
     <% end %>
-    <%= image_tag @outfit[0].image, class: "image-item"%>
+    <%= image_tag @outfit[0].image, class: "image-carousel"%>
   </div>
+
 </div>
