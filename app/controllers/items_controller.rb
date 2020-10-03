@@ -28,10 +28,6 @@ class ItemsController < ApplicationController
   def destroy
   end
 
-  # def wardrobe
-  #   @items = Item.find(params[:color])
-  #   @items = @items.find(params[:category])
-  # end
 
   def new
     @colors = Item.limit(9).pluck(:color)
@@ -65,6 +61,8 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
 
   end
+
+
 
   private
 

@@ -2,23 +2,27 @@
   <div class="form-wrapper pt-5" style="width: 400px; margin: 0 auto;">
     <%= simple_form_for @item, remote: false do |f| %>
 
-      <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
+      <div class="step1">
+          <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
 
-      <div class="color-picker-wrapper hidden">
+          <div class="color-picker-wrapper hidden">
 
-        <h1>Colors found!</h1>
-        <div class="color-picker">
-          <div class="cards">
+          <h1>Colors found!</h1>
+          <div class="color-picker">
+            <div class="cards">
 
+            </div>
+            <button class="hidden button-rectangle btn" type="button">Wrong color. Pick again</button>
+            <button id="pick-category" class="hidden button-rectangle btn" type="button">Match this item with something in your wardrobe</button>
           </div>
-          <button class="hidden button-rectangle btn" type="button">Wrong color. Pick again</button>
-          <button class="hidden button-rectangle btn" type="button">Match this item with something in your wardrobe</button>
-        </div>
-        <div class="guide-text">
-          <p>Tap a color to select</p>
+          <div class="guide-text">
+            <p>Tap a color to select</p>
+          </div>
         </div>
       </div>
-      <%= render "category_selection" %>
+      <div class="step2 hidden">
+        <%= render "category_selection" %>
+      </div>
     <% end %>
   </div>
 </div>

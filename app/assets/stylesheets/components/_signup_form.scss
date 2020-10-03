@@ -96,7 +96,7 @@
 $height: 60px;
 $trs-time: .4s;
 
-button {
+.confirmation-button {
     display: block;
     height: 60px;
     padding: 0;
@@ -114,9 +114,8 @@ button {
     border-radius: 30px;
     transition: background $trs-time, color $trs-time, font-size .05s, width $trs-time, border $trs-time;
     &:hover{
-      background: #1ECD97;
-      color: white;
-    }
+     background: #1ECD97;
+     color: white; }
   }
   .checkmark{
     position: absolute;
