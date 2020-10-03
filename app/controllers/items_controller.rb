@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   # added this skipping to spare some logging in during developement, this needs to go later.
   skip_before_action :authenticate_user!, only: [ :index, :show ]
-   include Pagy::Backend
+  include Pagy::Backend
 
   def index
     @items = Item.all
@@ -22,6 +22,10 @@ class ItemsController < ApplicationController
       @color = params[:color]
       category = Category.find_by_name(params[:category])
       @item = Item.where(color:@color, category:category)
+    end
+    if params[:id]
+      @item = Item.find(params[:id])
+      @outfit = top_secret_matching_algorithm(@item)
     end
   end
 
@@ -67,6 +71,18 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  def top_secret_matching_algorithm(item)
+    tops = Item.find_by(category:Category.find_by_name("tops"))
+    bottoms = Item.find_by(category:Category.find_by_name("bottoms"))
+    shoes = Item.find_by(category:Category.find_by_name("shoes"))
+    accessories = Item.find_by(category:Category.find_by_name("accessories"))
+    array = [tops, bottoms, shoes, accessories]
+    array.each do |i|
+      i.category == item.category && array.delete(i)
+    end
+    array << item
+  end
 
   def item_params
     params.require(:item).permit(:color, :image, :favorite, :name)
