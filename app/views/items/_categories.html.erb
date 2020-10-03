@@ -1,23 +1,43 @@
 <div class="wrapper-wardrobe" style="background-color: <%= @color %>">
   <h2>Wardrobe</h2>
     <div class="cards-wardrobe">
+
       <div class="color-ellipse" >
-        <%= link_to items_path(category:"shoes", color:@color), class: "no-underline" do %>
+        <% if @items.joins(:category).where(categories:{name:"shoes"}).exists? %>
+        <%= link_to items_path(category:"shoes", color:@color),class: "no-underline" do %>
+        <i class="fas fa-shoe-prints fa-3x"></i>
+        <% end %>
+        <% else %>
         <i class="fas fa-shoe-prints fa-3x"></i>
         <% end %>
       </div>
+
       <div class="color-ellipse">
-        <%= link_to items_path(category:"tops", color:@color)do %>
+        <% if @items.joins(:category).where(categories:{name:"tops"}).exists? %>
+        <%= link_to items_path(category:"tops", color:@color),class: "no-underline" do %>
+        <i class="fas fa-tshirt fa-3x"></i>
+        <% end %>
+        <% else %>
         <i class="fas fa-tshirt fa-3x"></i>
         <% end %>
       </div>
+
        <div class="color-ellipse">
-        <%= link_to items_path(category:"bottoms", color:@color)do %>
+        <% if @items.joins(:category).where(categories:{name:"bottoms"}).exists? %>
+        <%= link_to items_path(category:"bottoms", color:@color),class: "no-underline" do %>
+        <i class="fas fa-socks fa-3x"></i>
+        <% end %>
+        <% else %>
         <i class="fas fa-socks fa-3x"></i>
         <% end %>
       </div>
+
       <div class="color-ellipse">
-        <%= link_to items_path(category:"accessories", color:@color)do %>
+         <% if @items.joins(:category).where(categories:{name:"accessories"}).exists? %>
+        <%= link_to items_path(category:"accessories", color:@color),class: "no-underline" do %>
+        <i class="fas fa-hat-cowboy fa-3x"></i>
+        <% end %>
+        <% else %>
         <i class="fas fa-hat-cowboy fa-3x"></i>
         <% end %>
       </div>
