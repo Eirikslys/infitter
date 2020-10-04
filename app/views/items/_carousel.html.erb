@@ -1,5 +1,5 @@
-<!--  see components/_backgrounds.scss for the rules for this container  -->
    <%== pagy_nav(@pagy) %>
+<!--  see components/_backgrounds.scss for the rules for this container  -->
 <div class="container-adaptive" style="background-color: <%= @item.color %>">
 <!--   rules for this heart is in _heart.scss -->
  <% if @item.favorite %>
@@ -7,5 +7,16 @@
   <% else %>
     <i class="heart far fa-heart"></i>
   <% end %>
-  <%= image_tag @item.image, class: "image-item"%>
-</div>
+    <div class= "item-card">
+    <div class="item-circle" style=" background-color: <%= @item.color %>">
+      <div class="outfit-text">
+      <% if @item.name %>
+        <%=  link_to "create outfit with #{@item.name}", item_path(@item), class: "no-underline"%>
+      <% else %>
+      <%=  link_to "create outfit with this item", item_path(@item), class: "no-underline"%>
+      <% end %>
+      </div>
+    </div>
+    <%= image_tag @item.image, class: "image-carousel"%>
+  </div>
+  </div>
