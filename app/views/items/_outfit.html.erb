@@ -5,8 +5,17 @@
     <% else %>
       <i class="heart far fa-heart"></i>
     <% end %>
-    <div class= "item-card">
-    <div class="item-circle" style=" background-color: <%= @outfit[3].color %>"></div>
+    <div class= "item-card"> text
+    <div class="item-circle" style=" background-color: <%= @outfit[3].color %>">
+      <div class="outfit-text">
+      <% if @outfit[3].name %>
+        text
+      <% else %>
+
+      <p>text</p>
+      <% end %>
+      </div>
+    </div>
     <%= image_tag @outfit[3].image, class: "image-carousel"%>
   </div>
   </div>
@@ -19,7 +28,7 @@
       <i class="heart far fa-heart"></i>
     <% end %>
         <div class= "item-card">
-    <div class="item-circle" style=" background-color: <%= @outfit[1].color %>"></div>
+    <div class="item-circle" style=" background-color: <%= @outfit[1].color %>">text</div>
     <%= image_tag @outfit[1].image, class: "image-carousel"%>
   </div>
   </div>
