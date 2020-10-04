@@ -5,20 +5,20 @@
     <% else %>
       <i class="heart far fa-heart"></i>
     <% end %>
-    <div class= "item-card"> text
+    <div class= "item-card">
     <div class="item-circle" style=" background-color: <%= @outfit[3].color %>">
       <div class="outfit-text">
       <% if @outfit[3].name %>
-        text
+        <p><%= @outfit[3].name %></p>
       <% else %>
-
-      <p>text</p>
+      <p>A name is missing for this item</p>
       <% end %>
       </div>
     </div>
     <%= image_tag @outfit[3].image, class: "image-carousel"%>
   </div>
   </div>
+
 
 
   <div class="container-adaptive" id="component2" dir="ltr" style="background-color: <%= @outfit[1].color %>">
@@ -28,7 +28,13 @@
       <i class="heart far fa-heart"></i>
     <% end %>
         <div class= "item-card">
-    <div class="item-circle" style=" background-color: <%= @outfit[1].color %>">text</div>
+    <div class="item-circle" style=" background-color: <%= @outfit[1].color %>">
+      <% if @outfit[1].name %>
+        <p><%= @outfit[1].name %></p>
+      <% else %>
+      <p>A name is missing for this item</p>
+      <% end %>
+    </div>
     <%= image_tag @outfit[1].image, class: "image-carousel"%>
   </div>
   </div>
@@ -41,7 +47,14 @@
       <i class="heart far fa-heart"></i>
     <% end %>
         <div class= "item-card">
-    <div class="item-circle" style=" background-color: <%= @outfit[2].color %>"></div>
+    <div class="item-circle" style=" background-color: <%= @outfit[2].color %>">
+      <% if @outfit[2].name %>
+        <p><%= @outfit[2].name %></p>
+      <% else %>
+      <p>A name is missing for this item</p>
+      <% end %>
+
+    </div>
     <%= image_tag @outfit[2].image, class: "image-carousel"%>
   </div>
   </div>
@@ -54,7 +67,13 @@
       <i class="heart far fa-heart"></i>
     <% end %>
         <div class= "item-card">
-    <div class="item-circle" style= "background-color: <%= @outfit[0].color %>"></div>
+    <div class="item-circle" style= "background-color: <%= @outfit[0].color %>">
+      <% if @outfit[0].name %>
+        <p><%= @outfit[0].name %></p>
+      <% else %>
+      <p>A name is missing for this item</p>
+      <% end %>
+    </div>
     <%= image_tag @outfit[0].image, class: "image-carousel"%>
   </div>
   </div>

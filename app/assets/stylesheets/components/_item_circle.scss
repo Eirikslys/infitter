@@ -1,5 +1,6 @@
 .item-card {
   position: relative;
+
 }
 
 .item-circle {
@@ -17,5 +18,9 @@
   // disabled because it caused the text to appear in reverse
   position: absolute;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
 
 }
