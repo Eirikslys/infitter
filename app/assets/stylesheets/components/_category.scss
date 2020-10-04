@@ -13,12 +13,13 @@ background: #3C3A3A;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
-  line-height: 42px;
+  line-height: 67px;
   text-align: center;
   color: #FFFFFF;
-  padding-top: 61px;
-  padding-right: 39px;
-  padding-left: 34px;
+  margin-top: 0
+  // padding-top: 61px;
+  // padding-right: 39px;
+  // padding-left: 34px;
 }
 
 .cards-category {
@@ -68,7 +69,29 @@ background: #3C3A3A;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: none;
   // padding-bottom: 0px;
 
 
 }
+
+.super-box:hover {
+
+   border: none;
+
+}
+
+.button-category {
+  border-radius: 5px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
+
+
+}
+

@@ -30,6 +30,12 @@ import * as Vibrant from "node-vibrant";
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
+  document.querySelectorAll("#pick-category").forEach((button) =>{
+    button.addEventListener("click", (event) => {
+      document.querySelector(".step1").classList.add("hidden")
+      document.querySelector(".step2").classList.remove("hidden")
+    })
+  })
 
   document.querySelectorAll("#camera").forEach((input) => {
     input.addEventListener("change", (event) => {
@@ -102,6 +108,5 @@ $(document).ready(function () {
       }
   });
 });
-
 
 
