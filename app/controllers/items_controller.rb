@@ -4,7 +4,11 @@ class ItemsController < ApplicationController
   include Pagy::Backend
 
   def index
+    # added a sorting to make sure the most recently added items are displayed first .sort_by { |item| item.created_at }
     @items = Item.all
+     @items = @items.order(:created_at)
+
+
     @color = params[:color]
     if params[:category]
       @category = Category.find_by_name(params[:category])
@@ -13,8 +17,8 @@ class ItemsController < ApplicationController
     if @color
       @items = @items.where(color:@color)
     end
-     @pagy, @records = pagy(@items)
-     @item = @records.last
+    @pagy, @records = pagy(@items)
+    @item = @records.last
   end
 
   def show

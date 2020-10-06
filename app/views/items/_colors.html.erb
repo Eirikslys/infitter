@@ -1,12 +1,17 @@
 <div class= "container-gray">
   <h2 id="mycolors">My colors</h2>
   <div class="items-index">
-<%  @items.distinct(:color).pluck(:color).each do |color| %>
-      <%=  link_to items_path(color:color), class: "no-underline" do %>
+    <% @items.select(:color).pluck(:color).uniq.each do |color| %>
+
+      <%= link_to items_path(color:color), class: "no-underline" do %>
         <div class="color" style="background-color: <%=color%>">
-          <i class="heart far fa-heart"></i>
+        <i class="heart far fa-heart"></i>
         </div>
       <% end %>
-<% end %>
+    <% end %>
+  </div>
 </div>
-</div>
+
+<!-- We want the most recent colors to be the first to be displayed whether it is the favorite or recent view.
+Therefore the first order of business is to make the sorting of the array based on age happen in the controller.
+Then add something to only display the favorited items. -->
