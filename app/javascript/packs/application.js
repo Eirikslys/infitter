@@ -53,10 +53,10 @@ document.addEventListener("turbolinks:load", () => {
 
           hexCodes.forEach((color) => {
 
-            const colorInput = `<label class="color-card btn" style="background-color: ${color}" for="item_color_yellow">
+            const colorInput = `<label class="color-card btn" style="background-color: ${color}" for="item_color_${color}">
               ${color}
             </label>
-            <input type="radio" name="item[color]" id="item_color_black" value="${color}">`;
+            <input type="radio" name="item[color]" id="item_color_${color}" value="${color}">`;
             element.insertAdjacentHTML("beforeend", colorInput);
           });
           document.querySelectorAll(".color-card").forEach((card) => {
