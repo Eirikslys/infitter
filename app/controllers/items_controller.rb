@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   def index
     # added a sorting to make sure the most recently added items are displayed first .sort_by { |item| item.created_at }
     @items = Item.all
-     @items = @items.order(:created_at)
+    @items = @items.order(:created_at)
 
 
     @color = params[:color]
