@@ -1,8 +1,8 @@
 <div class= "container-gray">
   <% if  params[:favorite]%>
     <%= link_to "recent", items_path %>
-    <% else %>
-  <%= link_to "favorite", items_path(favorite:true) %>
+  <% else %>
+    <%= link_to "favorite", items_path(favorite:true) %>
   <% end %>
   <h2 id="mycolors">My colors</h2>
   <div class="items-index">

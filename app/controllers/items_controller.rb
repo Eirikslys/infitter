@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
       @items = @items.where(color:@color)
     end
     @pagy, @records = pagy(@items)
-    # commented this out because I suspect it's vestigal: @item = @records.last
+    @item = @records.last
   end
 
   def show
