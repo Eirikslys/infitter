@@ -5,40 +5,40 @@
       <div class="color-ellipse" >
         <% if @items.joins(:category).where(categories:{name:"shoes"}).exists? %>
         <%= link_to items_path(category:"shoes", color:@color),class: "no-underline" do %>
-        <i class="fas fa-shoe-prints fa-3x"></i>
+          <%=image_tag("icons/icon_shoe.png", class: "icon_shoes")%>
         <% end %>
         <% else %>
-        <i class="fas fa-shoe-prints fa-3x"></i>
+          <%=image_tag("icons/icon_shoe.png", class: "icon_shoes")%>
         <% end %>
       </div>
 
       <div class="color-ellipse">
         <% if @items.joins(:category).where(categories:{name:"tops"}).exists? %>
         <%= link_to items_path(category:"tops", color:@color),class: "no-underline" do %>
-        <i class="fas fa-tshirt fa-3x"></i>
+          <%=image_tag("icons/icon_top.png", class: "icon_top")%>
         <% end %>
         <% else %>
-        <i class="fas fa-tshirt fa-3x"></i>
-        <% end %>
-      </div>
-
-       <div class="color-ellipse">
-        <% if @items.joins(:category).where(categories:{name:"bottoms"}).exists? %>
-        <%= link_to items_path(category:"bottoms", color:@color),class: "no-underline" do %>
-        <i class="fas fa-socks fa-3x"></i>
-        <% end %>
-        <% else %>
-        <i class="fas fa-socks fa-3x"></i>
+          <%=image_tag("icons/icon_top.png", class: "icon_top")%>
         <% end %>
       </div>
 
       <div class="color-ellipse">
          <% if @items.joins(:category).where(categories:{name:"accessories"}).exists? %>
         <%= link_to items_path(category:"accessories", color:@color),class: "no-underline" do %>
-        <i class="fas fa-hat-cowboy fa-3x"></i>
+          <%=image_tag("icons/icon_cap.png", class: "icon_accessory")%>
         <% end %>
         <% else %>
-        <i class="fas fa-hat-cowboy fa-3x"></i>
+          <%=image_tag("icons/icon_cap.png", class: "icon_accessory")%>
+        <% end %>
+      </div>
+
+       <div class="color-ellipse">
+        <% if @items.joins(:category).where(categories:{name:"bottoms"}).exists? %>
+        <%= link_to items_path(category:"bottoms", color:@color),class: "no-underline" do %>
+        <%=image_tag("icons/icon_pants.png", class: "icon_bottom")%>
+        <% end %>
+        <% else %>
+        <%=image_tag("icons/icon_pants.png", class: "icon_bottom")%>
         <% end %>
       </div>
     </div>
