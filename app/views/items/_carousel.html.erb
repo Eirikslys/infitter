@@ -7,15 +7,15 @@
     <% if @item.favorite? %>
       <%= simple_form_for @item do |f| %>
         <%= f.input :favorite, :input_html => { :checked => false, class: "hidden" }, label: false  %>
-        <%= button_tag class: "heartbutton", style: "background-color: #{@item.color}", type: 'submit' do %>
-          <i class="heart fas fa-heart" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
+        <%= button_tag class: "knapp", style: "background-color: #{@item.color}", type: 'submit' do %>
+          <i class="heart fas fa-heart heartbutton" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
         <% end %>
       <% end %>
     <% else %>
       <%= simple_form_for @item do |f| %>
         <%= f.input :favorite, :input_html => { :checked => true, class: "hidden"}, label: false %>
-        <%= button_tag class: "heartbutton", style: "background-color: #{@item.color}", type: 'submit' do %>
-          <i class="heart far fa-heart" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
+        <%= button_tag class: "knapp", style: "background-color: #{@item.color}", type: 'submit' do %>
+          <i class="heart far fa-heart heartbutton" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
         <% end %>
       <% end %>
     <% end %>
