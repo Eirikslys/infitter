@@ -1,5 +1,5 @@
 .wrapper-home {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   background: #3B3A3A;
   display: grid;
   grid-template-columns: repeat(auto-fit 300px);

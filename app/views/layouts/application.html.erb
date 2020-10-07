@@ -16,12 +16,12 @@
 
   <body style="background-color: #3C3A3A;">
     <div class="page-container">
-    <%= render 'shared/flashes' %>
+      <%= render 'shared/flashes' %>
 
-    <main id="main-content">
-      <%= yield %>
-    </main>
-    <%= render "shared/navbar"  unless request.path == "/users/sign_up"  %>
+      <main id="main-content">
+        <%= yield %>
+      </main>
+      <%= render "shared/navbar"  unless request.path == "/users/sign_up"  %>
     </div>
   </body>
 
