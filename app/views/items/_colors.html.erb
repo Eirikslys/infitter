@@ -1,12 +1,48 @@
 <div class= "container-gray">
   <h2 id="mycolors">My colors</h2>
-  <div class="items-index">
-<%  @items.distinct(:color).pluck(:color).each do |color| %>
-      <%=  link_to items_path(color:color), class: "no-underline" do %>
+  <div class="" role="navigation">
+    <ul class="nav nav-tabs bar" id="myTab" role="tablist">
+      <!-- note the use of bootstrap classes for spacing -->
+      <li class="nav-item mx-3 mt-1">
+      <a class="nav-link active" id="recent-tab" data-toggle="tab" href="#recent" role="tab" aria-controls="recent" aria-selected="true">Recent</a>
+      </li>
+      <li class="nav-item mx-3 mt-1">
+        <a class="nav-link" id="favorite-tab" data-toggle="tab" href="#favorite" role="tab" aria-controls="favorite" aria-selected="false">Favorite</a>
+      </li>
+    </ul>
+<!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="recent" role="tabpanel" aria-labelledby="recent-tab">
+      <div class="items-index">
+          <% @items.select(:color).pluck(:color).uniq.each do |color| %>
+      <%= link_to items_path(color:color), class: "no-underline" do %>
         <div class="color" style="background-color: <%=color%>">
-          <i class="heart far fa-heart"></i>
+          <% if Item.where(color:color, favorite:true).exists? %>
+            <i class="heart fas fa-heart"></i>
+          <% else  %>
+            <i class="heart far fa-heart"></i>
+          <% end %>
         </div>
       <% end %>
-<% end %>
+    <% end %>
+  </div>
+    </div>
+    <div class="tab-pane" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
+      <div class="items-index">
+          <% @items.where(favorite:true).select(:color).pluck(:color).uniq.each do |color| %>
+      <%= link_to items_path(color:color), class: "no-underline" do %>
+        <div class="color" style="background-color: <%=color%>">
+          <% if Item.where(color:color, favorite:true).exists? %>
+            <i class="heart fas fa-heart"></i>
+          <% else  %>
+            <i class="heart far fa-heart"></i>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+    </div>
+  </div>
 </div>
 </div>
+

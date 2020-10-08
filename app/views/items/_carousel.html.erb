@@ -2,19 +2,30 @@
 <!--  see components/_backgrounds.scss for the rules for this container  -->
 <div class="container-adaptive" style="background-color: <%= @item.color %>">
 <!--   rules for this heart is in _heart.scss -->
-  <% if @item.favorite %>
-    <i class="heart fas fa-heart"></i>
-  <% else %>
-    <i class="heart far fa-heart"></i>
-  <% end %>
-    <div class= "item-card">
+
+  <div class= "item-card">
+    <% if @item.favorite? %>
+      <%= simple_form_for @item do |f| %>
+        <%= f.input :favorite, :input_html => { :checked => false, class: "hidden" }, label: false  %>
+        <%= button_tag class: "knapp", style: "background-color: #{@item.color}", type: 'submit' do %>
+          <i class="heart fas fa-heart heartbutton" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= simple_form_for @item do |f| %>
+        <%= f.input :favorite, :input_html => { :checked => true, class: "hidden"}, label: false %>
+        <%= button_tag class: "knapp", style: "background-color: #{@item.color}", type: 'submit' do %>
+          <i class="heart far fa-heart heartbutton" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
+        <% end %>
+      <% end %>
+    <% end %>
     <div class="item-circle" style=" background-color: <%= @item.color %>">
       <div class="outfit-text">
-      <% if @item.name %>
-        <%=  link_to "create outfit with #{@item.name}", item_path(@item), class: "no-underline"%>
-      <% else %>
-      <%=  link_to "create outfit with this item", item_path(@item), class: "no-underline"%>
-      <% end %>
+        <% if @item.name %>
+          <%=  link_to "create outfit with #{@item.name}", item_path(@item), class: "no-underline"%>
+        <% else %>
+          <%=  link_to "create outfit with this item", item_path(@item), class: "no-underline"%>
+        <% end %>
       </div>
     </div>
     <%= image_tag @item.image, class: "image-carousel"%>
