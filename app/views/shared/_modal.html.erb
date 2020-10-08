@@ -7,14 +7,15 @@
         </button>
       </div>
       <div class="modal-footer">
-      <div >
-        <button class="cancel-button" data-dismiss="modal">Cancel</button>
-      </div>
-      <div>
-        <button class="delete-button">Delete</button>
-      </div>
-
-
+        <div>
+          <button class="cancel-button" data-dismiss="modal">Cancel</button>
+        </div>
+        <div>
+          <%= link_to item_path(@item),
+          method: :delete do %>
+            <button class="delete-button">Delete</button>
+          <%end %>
+        </div>
       </div>
     </div>
   </div>

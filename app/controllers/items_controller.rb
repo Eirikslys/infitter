@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     if @color
       @items = @items.where(color:@color)
     end
-    @pagy, @records = pagy(@items)
+    @pagy, @records = pagy(@items, link_extra: "data-remote ='true'")
     @item = @records.last
   end
 
