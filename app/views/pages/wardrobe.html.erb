@@ -4,20 +4,20 @@
       <% @item.color %>
       <div class="color-ellipse" >
         <% @item.color %>
-        <i class="fas fa-tshirt fa-3x"></i>
+          <%=image_tag("icons/icon_shoe.png", class: "icon_shoes")%>
       </div>
       <div class="color-ellipse">
-        <%= link_to item_path(category:"tops", color:@color) class: "no-underline"  do %>
-        <i class="no-underline link fas fa-tshirt fa-3x"></i>
+        <%= link_to items_path(category:"tops", color:@color) class: "no-underline"  do %>
+          <%=image_tag("icons/icon_top.png", class: "icon_top"),%>
         <% end %>
       </div>
        <div class="color-ellipse">
         <%= link_to items_path(category:"shoes")do %>
-        <i class="fas fa-tshirt fa-3x"></i>
+          <%=image_tag("icons/icon_cap.png", class: "icon_accessory")%>
         <% end %>
       </div>
       <div class="color-ellipse">
-        <i class="fas fa-tshirt fa-3x"></i>
+        <%=image_tag("icons/icon_pants.png", class: "icon_bottom")%>
       </div>
     </div>
 </div>
