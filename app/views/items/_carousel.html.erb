@@ -30,9 +30,8 @@
     </div>
     <%= image_tag @item.image, class: "image-carousel"%>
   </div>
-  <%= link_to item_path(@item),
-  method: :delete,
-  data: { confirm: 'Are you sure?' } do %>
-    <i class="fas fa-trash-alt fa-2x"></i>
-  <%end %>
+      <button class="fas fa-trash-alt fa-2x" data-toggle="modal" data-target="#exampleModal">
+      </button>
+    <%= render "shared/modal" %>
+
 </div>

@@ -85,9 +85,9 @@ document.addEventListener("turbolinks:load", () => {
 
 $(document).ready(function () {
   var timer = null;
-  var self = $("button");
+  var self = $("confirmation-button");
   var clicked = false;
-  $("button").on("click", function () {
+  $("confirmation-button").on("click", function () {
     if (clicked === false){
       self.removeClass("filled");
       self.addClass("circle");
@@ -108,5 +108,6 @@ $(document).ready(function () {
       }
   });
 });
+
 
 
