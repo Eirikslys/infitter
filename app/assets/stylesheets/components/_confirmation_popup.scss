@@ -1,9 +1,9 @@
 .cancel-button {
   display: block;
     font-weight: bold;
-    height: 60px;
+    height: 100px;
     padding: 0;
-    width: 191px;
+    width: 100px;
     background: none;
     margin: auto;
     border: 2px solid #FFFFFF;
@@ -14,12 +14,12 @@
     outline: none;
     text-align: center;
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 100%;
     transition: background $trs-time, color $trs-time, font-size .05s, width $trs-time, border $trs-time;
   }
-    .cancel-button:hover {
+    .cancel-button {
      background: #1ECD97;
-     background: linear-gradient(300deg, #dfd183, #dfec79, #e3d146, #f9b894, #f9a374, #e38f8a, #f5817b, #fb746d, #fd493f, #fd493f, #f2dbdb, #f2c2c2, #f3a1a1, #f98585, #fd3636, #f2dbdb, #f2c2c2, #f3a1a1, #f98585, #fd3636, #d22525, #580a0a, #f0c39f, #f2a567, #f2842c, #f06f09, #f3eed0, #f3eab3, #f3f18a, #f2ef67, #f7f340, #f7f212, #d5d103, #b6b45f, #aaa728, #c3dfa7, #b5db8f, #a6df6d, #8cd542, #6fce0f, #2f4916, #c1d5c2, #9dd9a0, #81d986, #68e16f, #3cd745, #23bd2c, #9cd2bd, #82d5b5, #5cd9a9, #229d6e, #b1dbd6, #99d9d2, #7de1d6, #42e4d3, #31e6d3, #10dbc6, #33aea1, #238177, #264b47, #b9e8f0, #aee1ea, #8edbe8, #6ac8d7, #4ac4d7, #25b2c8, #07a1b9, #197583, #385054, #c4cddb, #9bbaea, #3c75cc, #25569f, #b8b7e3, #605de1, #1e1ac3, #bfaedb, #a387d2, #8153d0, #5b1dc6, #4c12b0, #d4b6dd, #d582ee, #c461e3, #a521ce, #d4abd0, #e3a7dd, #ea7adf, #ee48dd, #e319ce, #b77eb1, #b256a8, #9b218e, #ddbccd, #df97bc, #c16f99, #d74791, #e12183, #dd127a, #851f53, #ffc3c5, #f3a6a9, #f38387, #f06a6f, #f06a6f, #f3565c, #df363d, #d2171f, #8c1b20, #8c1b20, #50d4f2, #c8e5ec, #adecfb, #e1ebee, #1685a7, #fd7b4a, #9afd4a, #fdf14a, #4a66fd, #fd634a, #fd4ad7, #7a0b19, #968385, #afec99, #39c8b7, #79eedf, #1406d2, #f2f707, #07f5f7, #f7072f, #d3b4d4, #d3b4d4, #732176, #a3d934, #b8fd9e, #07a396, #07a396);
+     background: linear-gradient(300deg, #ff0000, #ff1919, #ff3232, #ff4c4c, #ff6666, #ff7f7f, #ff9999, #ffb2b2, #ffcccc, #f2e2e2, #f0d5d5, #f0c9c9, #f2b8b8, #f5aaaa, #ff9f9f, #f78181, #f96666, #f94848, #f73131,#f2e2e2, #f0d5d5, #f0c9c9, #f2b8b8, #f5aaaa, #ff9f9f, #f78181, #f96666, #f94848, #f73131,#f2e2e2, #f0d5d5, #f0c9c9, #f2b8b8, #f5aaaa, #ff9f9f, #f78181, #f96666, #f94848, #f73131,#f2e2e2, #f0d5d5, #f0c9c9, #f2b8b8, #f5aaaa, #ff9f9f, #f78181, #f96666, #f94848, #f73131,#f2e2e2, #f0d5d5, #f0c9c9, #f2b8b8, #f5aaaa, #ff9f9f, #f78181, #f96666, #f94848, #f73131, #f31b1b, #ee0707, #d9aeae, #d48484, #d25c5c, #d53737, #d50d0d, #d50d0d);
       background-size: 5400% 5400%;
       -webkit-animation: AnimationName 150s ease infinite;
       -moz-animation: AnimationName 150s ease infinite;
@@ -51,9 +51,9 @@
 .delete-button {
   font-weight: bold;
   display: block;
-    height: 60px;
+    height: 100px;
     padding: 0;
-    width: 191px;
+    width: 100px;
     background: none;
     margin: auto;
     border: 2px solid #FFFFFF;
@@ -64,12 +64,12 @@
     outline: none;
     text-align: center;
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 100%;
     transition: background $trs-time, color $trs-time, font-size .05s, width $trs-time, border $trs-time;
   }
-    .delete-button:hover {
+    .delete-button {
      background: #1ECD97;
-     background: linear-gradient(300deg, #dfd183, #dfec79, #e3d146, #f9b894, #f9a374, #e38f8a, #f5817b, #fb746d, #fd493f, #fd493f, #f2dbdb, #f2c2c2, #f3a1a1, #f98585, #fd3636, #f2dbdb, #f2c2c2, #f3a1a1, #f98585, #fd3636, #d22525, #580a0a, #f0c39f, #f2a567, #f2842c, #f06f09, #f3eed0, #f3eab3, #f3f18a, #f2ef67, #f7f340, #f7f212, #d5d103, #b6b45f, #aaa728, #c3dfa7, #b5db8f, #a6df6d, #8cd542, #6fce0f, #2f4916, #c1d5c2, #9dd9a0, #81d986, #68e16f, #3cd745, #23bd2c, #9cd2bd, #82d5b5, #5cd9a9, #229d6e, #b1dbd6, #99d9d2, #7de1d6, #42e4d3, #31e6d3, #10dbc6, #33aea1, #238177, #264b47, #b9e8f0, #aee1ea, #8edbe8, #6ac8d7, #4ac4d7, #25b2c8, #07a1b9, #197583, #385054, #c4cddb, #9bbaea, #3c75cc, #25569f, #b8b7e3, #605de1, #1e1ac3, #bfaedb, #a387d2, #8153d0, #5b1dc6, #4c12b0, #d4b6dd, #d582ee, #c461e3, #a521ce, #d4abd0, #e3a7dd, #ea7adf, #ee48dd, #e319ce, #b77eb1, #b256a8, #9b218e, #ddbccd, #df97bc, #c16f99, #d74791, #e12183, #dd127a, #851f53, #ffc3c5, #f3a6a9, #f38387, #f06a6f, #f06a6f, #f3565c, #df363d, #d2171f, #8c1b20, #8c1b20, #50d4f2, #c8e5ec, #adecfb, #e1ebee, #1685a7, #fd7b4a, #9afd4a, #fdf14a, #4a66fd, #fd634a, #fd4ad7, #7a0b19, #968385, #afec99, #39c8b7, #79eedf, #1406d2, #f2f707, #07f5f7, #f7072f, #d3b4d4, #d3b4d4, #732176, #a3d934, #b8fd9e, #07a396, #07a396);
+     background: linear-gradient(450deg, #1ecd97, #1bb887, #18a478, #158f69, #127b5a, #0f664b, #0c523c, #093d2d, #1ecd97, #34d2a1, #4ad7ab, #61dcb6, #78e1c0, #8ee6cb, #a5ebd5, #bbf0df, #d2f5ea, #e8faf4, #1ecd97, #1bb887, #18a478, #158f69, #127b5a, #0f664b, #0c523c, #093d2d, #1ecd97, #34d2a1, #4ad7ab, #61dcb6, #78e1c0, #8ee6cb, #a5ebd5, #bbf0df, #d2f5ea, #e8faf4, #1ecd97, #1bb887, #18a478, #158f69, #127b5a, #0f664b, #0c523c, #093d2d, #1ecd97, #34d2a1, #4ad7ab, #61dcb6, #78e1c0, #8ee6cb, #a5ebd5, #bbf0df, #d2f5ea, #e8faf4, #1ecd97, #1bb887, #18a478, #158f69, #127b5a, #0f664b, #0c523c, #093d2d, #1ecd97, #34d2a1, #4ad7ab, #61dcb6, #78e1c0, #8ee6cb, #a5ebd5, #bbf0df, #d2f5ea, #e8faf4);
       background-size: 5400% 5400%;
       -webkit-animation: AnimationName 150s ease infinite;
       -moz-animation: AnimationName 150s ease infinite;
@@ -137,3 +137,5 @@
 .modal-footer {
   justify-content: space-around;
 }
+
+
