@@ -23,6 +23,7 @@ require("channels");
 // External imports
 import "bootstrap";
 import * as Vibrant from "node-vibrant";
+import * as NameThatColor from "ntc";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -52,9 +53,10 @@ document.addEventListener("turbolinks:load", () => {
           element.innerHTML = "";
 
           hexCodes.forEach((color) => {
+            const colorName = (NameThatColor.name(color))
 
             const colorInput = `<label class="color-card btn" style="background-color: ${color}" for="item_color_${color}">
-              ${color}
+              ${colorName[1]}
             </label>
             <input type="radio" name="item[color]" id="item_color_${color}" value="${color}">`;
             element.insertAdjacentHTML("beforeend", colorInput);
