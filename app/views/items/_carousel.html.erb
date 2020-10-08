@@ -1,4 +1,3 @@
-   <%== pagy_nav(@pagy) %>
 <!--  see components/_backgrounds.scss for the rules for this container  -->
 <div class="container-adaptive" style="background-color: <%= @item.color %>">
 <!--   rules for this heart is in _heart.scss -->
@@ -29,9 +28,25 @@
       </div>
     </div>
     <%= image_tag @item.image, class: "image-carousel"%>
+    <% if pagy_next_url(@pagy) %>
+      <%=link_to pagy_next_url(@pagy) do %>
+        <%= image_tag @item.image, class: "image-carousel shadow"%>
+      <%end %>
+    <% end %>
   </div>
-      <button class="fas fa-trash-alt fa-2x" data-toggle="modal" data-target="#exampleModal">
-      </button>
+  <div>
+
+  </div>
+  <div>
+    <% if pagy_prev_url(@pagy) %>
+      <%= link_to "<", pagy_prev_url(@pagy) %>
+    <% end %>
+<!--     <% if pagy_next_url(@pagy) %>
+      <%= link_to ">", pagy_next_url(@pagy) %>
+    <% end %> -->
+
+  </div>
+    <button class="fas fa-trash-alt fa-2x" data-toggle="modal" data-target="#exampleModal"></button>
     <%= render "shared/modal" %>
 
 </div>
