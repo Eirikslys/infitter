@@ -20,10 +20,11 @@
       <%= render 'shared/flashes' %>
 
       <main id="main-content">
-        <%= yield %>
+        <div class="page-content"><%= yield %></div>
+        <div class="hidden new-item-form"><%= render "shared/item_form" %></div>
       </main>
       <%= render "shared/navbar"  unless request.path == "/users/sign_up"  %>
     </div>
   </body>
-
+<!-- window.location -->
 </html>
