@@ -83,13 +83,26 @@ class ItemsController < ApplicationController
     bottoms = Item.find_by(category:Category.find_by_name("bottoms"))
     shoes = Item.find_by(category:Category.find_by_name("shoes"))
     accessories = Item.find_by(category:Category.find_by_name("accessories"))
-    array = [tops, bottoms, shoes, accessories]
-    array.each do |i|
-      i.category == item.category && array.delete(i)
+    array = []
+    [accessories, tops, bottoms, shoes].map do |i|
+      i.category == item.category ? array << item : array << i
     end
-    array << item
+    array
   end
 
+# def top_secret_matching_algorithm(item)
+#     tops = Item.find_by(category:Category.find_by_name("tops"))
+#     bottoms = Item.find_by(category:Category.find_by_name("bottoms"))
+#     shoes = Item.find_by(category:Category.find_by_name("shoes"))
+#     accessories = Item.find_by(category:Category.find_by_name("accessories"))
+#     array = [accessories, tops, bottoms, shoes]
+#     carousel = []
+#     [accessories, tops, bottoms, shoes].map do |i|
+#       i.category == item.category ? carousel << item : carousel << i
+#     end
+#     array << item
+#     raise
+#   end
   def item_params
     params.require(:item).permit(:color, :image, :favorite, :name)
   end
