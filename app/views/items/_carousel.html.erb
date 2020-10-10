@@ -23,7 +23,7 @@
         <% if @item.name %>
           <%=  link_to "create outfit with #{@item.name}", item_path(@item), class: "no-underline item-circle", style:" background-color: #{@item.color}" %>
         <% else %>
-          <%=  link_to "create outfit with this item", item_path(@item), class: "no-underline item-circle"%>
+          <%=  link_to "create outfit with this item #{@item.name}", item_path(@item), class: "no-underline item-circle", style:" background-color: #{@item.color}" %>
         <% end %>
       </div>
     </div>
