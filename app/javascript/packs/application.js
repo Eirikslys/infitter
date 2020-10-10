@@ -54,6 +54,10 @@ document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
 
+  // This code will check if the current page is the items/new page, if it is not
+  // the hidden class will be removed from the camera div and added to the content div
+  // (see application.html.erb), then the image submission will be clicked in the formerly hidden
+  // div. The form is now located inside shared/_item_form.html.erb -Eirik
   if (window.location.href != "http://localhost:3000/items/new" && window.location.href != "https://www.infitter.net/items/new") {
     const camera = document.getElementById("camera-link")
     if (camera) {
