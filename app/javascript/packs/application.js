@@ -53,6 +53,28 @@ document.addEventListener('swiped-right', function(e) {
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
+
+  if (window.location.href != "http://localhost:3000/items/new" && window.location.href != "https://www.infitter.net/items/new") {
+    const camera = document.getElementById("camera-link")
+    if (camera) {
+      camera.addEventListener("click", (event) => {
+        event.preventDefault();
+        const form = document.querySelector(".new-item-form");
+        const content = document.querySelector(".page-content");
+        form.classList.remove("hidden");
+        const cameraInput = document.querySelector("#camera");
+        cameraInput.click();
+        content.classList.add("hidden")
+        history.pushState(null, null, "items/new")
+        console.log("camera operation successful")
+      })
+    }
+  }
+
+
+  // history.pushState(null, null, "items/new")
+  // window.location.href === /.*\/items\/new/
+
   document.querySelectorAll("#pick-category").forEach((button) =>{
     button.addEventListener("click", (event) => {
       document.querySelector(".step1").classList.add("hidden")
