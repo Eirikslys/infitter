@@ -1,4 +1,4 @@
-<div class="container pt-5">
+<div class="container pt-1">
   <div class="form-wrapper pt-5" style="width: 400px; margin: 0 auto;">
     <%= simple_form_for @item, remote: false do |f| %>
 
@@ -13,7 +13,7 @@
             <div class="cards">
 
             </div>
-            <button class="hidden button-rectangle btn" type="button">Wrong color. Pick again</button>
+            <button id="pick-again" class="hidden button-rectangle btn" type="button">Wrong color? Pick again</button>
             <button id="pick-category" class="hidden button-rectangle btn" type="button">Match this item with something in your wardrobe</button>
           </div>
           <div class="guide-text">

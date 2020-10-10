@@ -36,10 +36,23 @@ import * as NameThatColor from "ntc";
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
+
+  //hiddden step1 and step2 on page when picking category
   document.querySelectorAll("#pick-category").forEach((button) =>{
     button.addEventListener("click", (event) => {
       document.querySelector(".step1").classList.add("hidden")
       document.querySelector(".step2").classList.remove("hidden")
+    })
+  })
+
+  //hiddden step1 and step2 on page when color is selected
+  document.querySelectorAll(".color-picker-wrapper").forEach((button) =>{
+    button.addEventListener("click", (event) => {
+      document.querySelector(".step2").classList.add("hidden")
+      document.querySelector(".step1").classList.remove("hidden")
+      document.querySelector("h1").classList.add("hidden")
+      document.querySelector("#camera").classList.add("hidden")
+
     })
   })
 
