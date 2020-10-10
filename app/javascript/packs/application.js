@@ -50,7 +50,7 @@ document.addEventListener("turbolinks:load", () => {
     button.addEventListener("click", (event) => {
       document.querySelector(".step2").classList.add("hidden")
       document.querySelector(".step1").classList.remove("hidden")
-      document.querySelector("h1").classList.add("hidden")
+      document.querySelector("h2").classList.add("hidden")
       document.querySelector("#camera").classList.add("hidden")
 
     })
@@ -59,6 +59,7 @@ document.addEventListener("turbolinks:load", () => {
 
   document.querySelectorAll("#camera").forEach((input) => {
     input.addEventListener("change", (event) => {
+      document.querySelector("#camera").classList.add("hidden")
       console.log("here");
       const path = URL.createObjectURL(event.target.files[0]);
       Vibrant.from(path)
