@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
 
   def new
     @colors = Item.limit(9).pluck(:color)
-    @item = Item.new
+    @new_item = Item.new
   end
 
   def edit
@@ -60,10 +60,10 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
-    @item.user = current_user
-    @item.category = Category.find_by_name(category_param)
-    if @item.save!
+    @new_item = Item.new(item_params)
+    @new_item.user = current_user
+    @new_item.category = Category.find_by_name(category_param)
+    if @new_item.save!
       redirect_to items_path
     else
       @colors = Item.limit(9).pluck(:color)

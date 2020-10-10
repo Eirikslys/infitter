@@ -1,6 +1,6 @@
 <div class="container pt-5">
   <div class="form-wrapper pt-5" style="width: 400px; margin: 0 auto;">
-    <%= simple_form_for @item, remote: false do |f| %>
+    <%= simple_form_for @new_item || Item.new, remote: false do |f| %>
 
       <div class="step1">
           <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="step2 hidden">
-        <%= render "category_selection" %>
+        <%= render "items/category_selection" %>
       </div>
     <% end %>
   </div>
