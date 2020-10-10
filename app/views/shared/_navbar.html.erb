@@ -21,10 +21,10 @@
       </ul>
       <% else %>
         <li class="nav-item">
-            <p><%= link_to "Sign up/Log in", new_user_session_path, class: "nav-link"%></p>
+          <%= link_to "My colors", items_path, class: "nav-fontcolor" %>
         </li>
         <li class="nav-item">
-          <%= link_to "My colors", items_path, class: "nav-fontcolor" %>
+            <p><%= link_to "Sign up/Log in", new_user_session_path, class: "nav-link"%></p>
         </li>
       <% end %>
     </ul>
