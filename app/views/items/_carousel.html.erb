@@ -28,6 +28,11 @@
       </div>
     </div>
     <%= image_tag @item.image, class: "image-carousel"%>
+    <% if pagy_prev_url(@pagy) %>
+      <%=link_to pagy_prev_url(@pagy) do %>
+        <%= image_tag @items.first.image, class: "image-carousel front"%>
+      <% end %>
+    <% end %>
     <% if pagy_next_url(@pagy) %>
       <%=link_to pagy_next_url(@pagy) do %>
         <%= image_tag @items.last.image, class: "image-carousel shadow"%>
@@ -37,9 +42,9 @@
   <div>
   </div>
   <div>
-    <% if pagy_prev_url(@pagy) %>
+<!--     <% if pagy_prev_url(@pagy) %>
       <%= link_to "<", pagy_prev_url(@pagy) %>
-    <% end %>
+    <% end %> -->
 <!--     <% if pagy_next_url(@pagy) %>
       <%= link_to ">", pagy_next_url(@pagy) %>
     <% end %> -->
