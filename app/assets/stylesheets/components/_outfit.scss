@@ -1,7 +1,7 @@
 .outfit {
   scroll-snap-type: y mandatory;
   overflow: scroll;
-  height: 100vh;
+  height: calc(100vh - 80px);
   width: 100vw;
 }
 
@@ -17,7 +17,8 @@ font-family: "Work Sans", sans-serif;
 
 
 #component1 {
-  scroll-snap-align: start;
+  height: calc(88vh - 80px);
+  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -25,7 +26,8 @@ font-family: "Work Sans", sans-serif;
 }
 
 #component2 {
-  scroll-snap-align: start;
+  height: calc(88vh - 80px);
+  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -33,7 +35,8 @@ font-family: "Work Sans", sans-serif;
 }
 
 #component3 {
-  scroll-snap-align: start;
+  height: calc(88vh - 80px);
+  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -41,13 +44,12 @@ font-family: "Work Sans", sans-serif;
 }
 
 #component4 {
-  scroll-snap-align: start;
-  height: 100vh;
+  height: calc(88vh - 80px);
+  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-content: center;
   position:relative;
-  padding-bottom: 10vh;
 }
 
 .image-carousel {
