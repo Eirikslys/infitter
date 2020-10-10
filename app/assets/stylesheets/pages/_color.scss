@@ -35,7 +35,10 @@
 .selected {
   width: 300px;
   height: 300px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
 }
 
 .color-picker {
@@ -50,4 +53,18 @@
 
 .my_a_tag {
   text-decoration: none;
+}
+.color-card.btn.selected{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Vollkorn', serif;
+    color: white !important;
+    font-size: 34px;
+}
+
+label {
+  color: white;
+  font-family: 'Vollkorn', serif;
+
 }

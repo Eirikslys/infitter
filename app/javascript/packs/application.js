@@ -43,6 +43,7 @@ document.addEventListener("turbolinks:load", () => {
     })
   })
 
+
   document.querySelectorAll("#camera").forEach((input) => {
     input.addEventListener("change", (event) => {
       console.log("here");
@@ -60,9 +61,9 @@ document.addEventListener("turbolinks:load", () => {
           hexCodes.forEach((color) => {
             const colorName = (NameThatColor.name(color))
 
-            const colorInput = `<label class="color-card btn" style="background-color: ${color}" for="item_color_${color}">
+            const colorInput = `<div class="color-flex"><label class="color-card btn" style="background-color: ${color}", for="item_color_${color}">
               ${colorName[1]}
-            </label>
+            </label></div>
             <input type="radio" name="item[color]" id="item_color_${color}" value="${color}">`;
             element.insertAdjacentHTML("beforeend", colorInput);
           });
