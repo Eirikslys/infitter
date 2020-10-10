@@ -54,3 +54,17 @@
 .my_a_tag {
   text-decoration: none;
 }
+.color-card.btn.selected{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Vollkorn', serif;
+    color: white !important;
+    font-size: 34px;
+}
+
+label {
+  color: white;
+  font-family: 'Vollkorn', serif;
+
+}
