@@ -53,6 +53,8 @@ document.addEventListener('swiped-right', function(e) {
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
+
+  //hiddden step1 and step2 on page when picking category
   document.querySelectorAll("#pick-category").forEach((button) =>{
     button.addEventListener("click", (event) => {
       document.querySelector(".step1").classList.add("hidden")
@@ -60,9 +62,21 @@ document.addEventListener("turbolinks:load", () => {
     })
   })
 
+  //hiddden step1 and step2 on page when color is selected
+  document.querySelectorAll(".color-picker-wrapper").forEach((button) =>{
+    button.addEventListener("click", (event) => {
+      document.querySelector(".step2").classList.add("hidden")
+      document.querySelector(".step1").classList.remove("hidden")
+      document.querySelector("h2").classList.add("hidden")
+      document.querySelector("#camera").classList.add("hidden")
+
+    })
+  })
+
 
   document.querySelectorAll("#camera").forEach((input) => {
     input.addEventListener("change", (event) => {
+      document.querySelector("#camera").classList.add("hidden")
       console.log("here");
       const path = URL.createObjectURL(event.target.files[0]);
       Vibrant.from(path)
