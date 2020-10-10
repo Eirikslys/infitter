@@ -3,12 +3,12 @@
     <%= simple_form_for @item, remote: false do |f| %>
 
       <div class="step1">
+        <div class="choosefile-btn">
           <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
+        </div>
 
           <div class="color-picker-wrapper hidden">
-            <div class="text-colorsfound">
               <h1>Colors found!</h1>
-            </div>
           <div class="color-picker">
             <div class="cards">
 
