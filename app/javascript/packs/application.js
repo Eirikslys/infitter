@@ -24,7 +24,7 @@ require("channels");
 import "bootstrap";
 import * as Vibrant from "node-vibrant";
 import * as NameThatColor from "ntc";
-
+import "swiped-events"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -32,6 +32,23 @@ import * as NameThatColor from "ntc";
 // nextButton.value = ">";
 // const prevButton = document.getElementsByCLass("page prev");
 // nextButton.value = "<";
+
+document.addEventListener('swiped-left', function(e) {
+  console.log(e.target); // element that was swiped
+  console.log(e.detail); // event data { dir: 'left', xStart: 196, xEnd: 230, yStart: 196, yEnd: 4 }
+  const next = document.querySelector(".shadow");
+  console.log(next)
+  next.click();
+});
+
+document.addEventListener('swiped-right', function(e) {
+  console.log(e.target); // element that was swiped
+  console.log(e.detail); // event data { dir: 'right', xStart: 196, xEnd: 230, yStart: 196, yEnd: 4 }
+  const prev = document.querySelector(".front");
+  console.log(prev)
+  prev.click();
+
+});
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
