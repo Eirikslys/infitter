@@ -28,6 +28,11 @@ import * as NameThatColor from "ntc";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+// const nextButton = document.getElementsByCLass("page next");
+// nextButton.value = ">";
+// const prevButton = document.getElementsByCLass("page prev");
+// nextButton.value = "<";
+
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
