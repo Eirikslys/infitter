@@ -60,7 +60,7 @@ document.addEventListener("turbolinks:load", () => {
   // (see application.html.erb), then the image submission will be clicked in the formerly hidden
   // div. The form is now located inside shared/_item_form.html.erb -Eirik
   if (window.location.href != "http://localhost:3000/items/new" && window.location.href != "https://www.infitter.net/items/new") {
-    const camera = document.getElementById("camera-link")
+    const camera = document.getElementById("camera-home")
     if (camera) {
       camera.addEventListener("click", (event) => {
         event.preventDefault();
@@ -74,6 +74,25 @@ document.addEventListener("turbolinks:load", () => {
         console.log("camera operation successful")
       })
     }
+    const cameraLink = document.getElementById("camera-link")
+    if (cameraLink) {
+      cameraLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        const form = document.querySelector(".new-item-form");
+        const content = document.querySelector(".page-content");
+        form.classList.remove("hidden");
+        const cameraInput = document.querySelector("#camera");
+        cameraInput.click();
+        content.classList.add("hidden")
+        history.pushState(null, null, "items/new")
+        console.log("camera operation successful")
+      })
+    }
+
+  }
+
+  const cameraFunc = (camera) => {
+
   }
 
 
