@@ -2,6 +2,7 @@
 <div class="container-adaptive" style="background-color: <%= @item.color %>">
 <!--   rules for this heart is in _heart.scss -->
 
+
   <div class= "item-card">
     <% if @item.favorite? %>
       <%= simple_form_for @item do |f| %>
@@ -21,9 +22,9 @@
     <div>
       <div class="outfit-text">
         <% if @item.name %>
-          <%=  link_to "create outfit with #{@item.name}", item_path(@item), class: "no-underline item-circle", style:" background-color: #{@item.color}" %>
+          <%=  link_to "Create outfit with <b>#{@item.name}</b>".html_safe, item_path(@item), class: "no-underline item-circle", style:" background-color: #{@item.color}" %>
         <% else %>
-          <%=  link_to "create outfit with this item #{@item.name}", item_path(@item), class: "no-underline item-circle", style:" background-color: #{@item.color}" %>
+          <%=  link_to "Create outfit with this item #{@item.name}", item_path(@item), class: "no-underline item-circle", style:" background-color: #{@item.color}" %>
         <% end %>
       </div>
     </div>
