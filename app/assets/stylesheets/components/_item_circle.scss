@@ -18,10 +18,13 @@
   // transform: matrix(-1, 0, 0, 1, 0, 0);
   // disabled because it caused the text to appear in reverse
   margin: 0 auto;
-  display: flex;
+  // display: flex;
   justify-content: center;
-  padding: 24px;
+  padding: 25px;
   text-align: center;
+  font-family: 'Vollkorn', serif !important;
+  font-size: 1.09em;
+
 
 
 }

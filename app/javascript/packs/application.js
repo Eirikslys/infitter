@@ -102,6 +102,7 @@ document.addEventListener("turbolinks:load", () => {
   //hiddden step1 and step2 on page when picking category
   document.querySelectorAll("#pick-category").forEach((button) =>{
     button.addEventListener("click", (event) => {
+      console.log("click registered")
       document.querySelector(".step1").classList.add("hidden")
       document.querySelector(".step2").classList.remove("hidden")
     })

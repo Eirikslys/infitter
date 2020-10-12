@@ -2,7 +2,7 @@
   <div class="form-wrapper pt-5" style="width: 400px; margin: 0 auto;">
     <%= simple_form_for @new_item || Item.new, remote: false do |f| %>
 
-      <div class="step1">
+      <div class="step1" id="step1">
           <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
 
           <div class="color-picker-wrapper hidden">
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="step2 hidden">
+      <div class="step2 hidden" id="step2">
         <%= render "items/category_selection" %>
       </div>
     <% end %>
