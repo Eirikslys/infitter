@@ -1,19 +1,30 @@
 
-<div class="wrapper-home">
-  <div class="box">
-    <h1 class="font-headline">InFitter</h1>
-  </div>
-  <div class="box">
-    <div class="ellipse">
-      <div class="box">
-        <%= link_to new_item_path, id:"camera-home" do %>
-          <i class="fas fa-camera"> </i>
-        <% end %>
+<% if user_signed_in? %>
+  <div class="wrapper-home">
+    <div class="box-for-header">
+      <h1 class="font-headline">InFitter</h1>
+    </div>
+    <div class="box">
+      <div class="ellipse">
+        <div class="box">
+          <%= link_to new_item_path do %>
+            <i class="fas fa-camera"> </i>
+          <% end %>
+        </div>
+
       </div>
     </div>
+    <div class="box">
+      <% if user_signed_in? %>
+      <h2>Scan a piece of clothing</h2>
+      <% else %>
+      <ul>
+          <h2>Don´t get stressed, get dressed!</h2>
+          <p class="information-home-page">With Infitter, getting dressed and colormatching have never been easier. Scan an item, and Infitter will find you a complete outfit.</p>
+        <% end%>
+      </ul>
+    </div>
   </div>
-  <div class="box">
-    <h2>Scan a piece of clothing</h2>
-  </div>
-
-</div>
+  <% else %>
+  <%= render "shared/home_before_signup" %>
+<% end %>

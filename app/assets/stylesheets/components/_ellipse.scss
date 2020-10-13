@@ -1,25 +1,8 @@
-.wrapper-home {
-  // min-height: calc(100vh - 80px);
-  background: #3B3A3A;
-  display: grid;
-  grid-template-columns: repeat(auto-fit 300px);
-  grid-template-rows: repeat (2, 1fr);
-
-}
-
-.wrapper-home > :last-child {
-  margin-top: 60px;
-}
-
 
 .box {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
-
-
-
 
 }
 
