@@ -2,11 +2,11 @@
   <div class="nav-wrapper">
   <!-- this conditonal makes sure the home button is not rendered if the user is
   currently on the home page -->
-    <% if request.path != "/" %>
+    <% if request.path != "/" && request.path != "/users/sign_in" %>
       <div class="classguy">
         <%= link_to new_item_path, class: "camera-button", id:"camera-link" do %>
           <i class="fas fa-camera fa-2x" id="cam-btn"></i>
-        <%end %>
+        <% end %>
       </div>
     <% end %>
     <ul class="mr-auto">
@@ -21,7 +21,10 @@
       </ul>
       <% else %>
         <li class="nav-item">
-            <p><%= link_to "Sign up/Log in", new_user_session_path, class: "nav-link"%></p>
+
+
+            <p><%= link_to "Sign up/Log in", new_user_session_path, class: "nav-home"%></p>
+
         </li>
       <% end %>
     </ul>

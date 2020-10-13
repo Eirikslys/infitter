@@ -6,7 +6,7 @@
   bottom: 0;
   border-top: 1px solid #FFFFFF;
   width: 100vw;
-  z-index: 2;
+  z-index: 6;
 
 }
 
@@ -14,6 +14,7 @@
   text-decoration: none;
   color: white;
   padding: 25px;
+
 }
 
 
@@ -60,13 +61,33 @@
 }
 
 .nav-fontcolor {
+  color: #FFFFFF;
+  display: block;
+  padding: 0.5rem 1rem;
+  font-family: "Work Sans", sans-serif;
+  opacity: 70%;
+  padding-left: 25px;
+  padding-top: 25px;
+
+}
+
+.nav-home {
+  text-decoration: none;
   color: white;
   display: block;
   padding: 0.5rem 1rem;
   font-family: "Work Sans", sans-serif;
   opacity: 70%;
-   padding-left: 25px;
+  padding-left: 230px;
   padding-top: 25px;
+  font-size: 16px;
+
 
 }
+
+.nav-home:hover {
+  text-decoration: none;
+  color: white;
+}
+
 

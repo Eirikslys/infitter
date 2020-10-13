@@ -2,7 +2,7 @@
   <div class="form-wrapper pt-5" style="width: 400px; margin: 0 auto;">
     <%= simple_form_for @new_item || Item.new, remote: false do |f| %>
 
-      <div class="step1">
+      <div class="step1" id="step1">
           <%= f.file_field :image, accept: "image/*", capture: "camera", id: "camera"  %>
 
           <div class="color-picker-wrapper hidden">
@@ -14,14 +14,14 @@
 
             </div>
             <button id="pick-again" class="hidden button-rectangle btn" type="button">Wrong color? No worries, pick again here.</button>
-            <button id="pick-category" class="hidden button-rectangle btn" type="button">Match this item with something in your wardrobe.</button>
+            <button id="pick-category" class="hidden button-rectangle btn" type="button">Click here to tell us what category your latest piece of clothing is.</button>
           </div>
           <div class="guide-text">
             <p>Tap a color to select</p>
           </div>
         </div>
       </div>
-      <div class="step2 hidden">
+      <div class="step2 hidden" id="step2">
         <%= render "items/category_selection" %>
       </div>
     <% end %>
