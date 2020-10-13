@@ -4,9 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Vollkorn&display=swap');
 
 // Define fonts for body and headers
-// work sans for smaller texts, button. vollkorn for larger texts and work sans for small buttons.
-$body-font: "Work Sans", sans-serif, 'Vollkorn', serif;
-$headers-font: 'Do Hyeon', sans-serif,  'Vollkorn', serif;
+$body-font: "Inter", sans-serif, 'Inter', sans-serif;
+$headers-font: 'Do Hyeon', sans-serif,  'Inter', sans-serif;
 
 // commented out the original fonts
 // $body-font: "Work Sans", "Helvetica", "sans-serif";
