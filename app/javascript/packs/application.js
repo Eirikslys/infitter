@@ -71,7 +71,7 @@ document.addEventListener("turbolinks:load", () => {
         cameraInput.click();
         content.classList.add("hidden")
         history.pushState(null, null, "items/new")
-        console.log("camera operation successful")
+        console.log("home")
       })
     }
     const cameraLink = document.getElementById("camera-link")
@@ -85,7 +85,7 @@ document.addEventListener("turbolinks:load", () => {
         cameraInput.click();
         content.classList.add("hidden")
         history.pushState(null, null, "items/new")
-        console.log("camera operation successful")
+        console.log("link")
       })
     }
 
@@ -109,15 +109,16 @@ document.addEventListener("turbolinks:load", () => {
   })
 
   //hiddden step1 and step2 on page when color is selected
-  document.querySelectorAll(".color-picker-wrapper").forEach((button) =>{
-    button.addEventListener("click", (event) => {
-      document.querySelector(".step2").classList.add("hidden")
-      document.querySelector(".step1").classList.remove("hidden")
-      document.querySelector("h2").classList.add("hidden")
-      document.querySelector("#camera").classList.add("hidden")
+  // document.querySelectorAll(".color-picker-wrapper").forEach((button) =>{
+  //   button.addEventListener("click", (event) => {
+  //     document.querySelector(".step2").classList.add("hidden")
+  //     document.querySelector(".step1").classList.remove("hidden")
+  //     document.querySelector("h2").classList.add("hidden")
+  //     document.querySelector("#camera").classList.add("hidden")
+  //     console.log("color")
 
-    })
-  })
+  //   })
+  // })
 
 
   document.querySelectorAll("#camera").forEach((input) => {
