@@ -1,16 +1,16 @@
 <div id="content" class="site-content ">
   <section id="welcome">
   <div class="slide teal" style="background-color: #21868c">
-    <div class="container">
+    <div class="container teal-container">
       <%= image_tag("logo_infitter.png", class: "logo") %>
-      <h1>Don´t stress. <strong>Get dressed</strong>.</h1>
+      <h2>Don´t stress, get dressed.</h2>
       <p>With Infitter, getting dressed and colormatching have never been easier. Scan an item, and Infitter will find you a complete outfit</p>
+    <div class="get-dressed-btn-wrapper">
+      <%= link_to "Get dressed!", new_user_registration_path, class: "button-rectangle get-dressed btn-block"%>
     </div>
-    <div>
-      <%= link_to "Get started and create your first outfit", new_user_registration_path, class: "button-rectangle"%>
     </div>
     <div class="slide grey" style="background-color:#3B3A3A">
-      <div class="container">
+      <div class="gray-container">
 
       </div>
     </div>
