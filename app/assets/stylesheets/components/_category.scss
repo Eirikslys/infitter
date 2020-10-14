@@ -1,5 +1,9 @@
+form {
+  max-height: 50vh !important;
+
+}
 .wrapper-category {
-height: calc(100vh - 80px);
+max-height: calc(100vh - 80px);
 background: #3C3A3A;
 
 }
