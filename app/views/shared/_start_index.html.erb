@@ -1,0 +1,55 @@
+<div class="dropdown index-dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-filter"></i>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+    <%= link_to items_path(category:"accessories", color:@color),class: "dropdown-item" do %>
+      accessories
+    <% end %>
+
+    <%= link_to items_path(category:"tops", color:@color),class: "dropdown-item" do %>
+      tops
+    <% end %>
+
+    <%= link_to items_path(category:"bottoms", color:@color),class: "dropdown-item" do %>
+      bottoms
+    <% end %>
+    <div class="dropdown-box">
+      <%= link_to items_path(category:"shoes", color:@color),class: "dropdown-item" do %>
+        shoes
+      <% end %>
+    </div>
+    <div class="dropdown-divider"></div>
+    <% @colors.each do |color| %>
+      <%= link_to "&nbsp;".html_safe, items_path(color:color), class: "dropdown-item", style: "background-color: #{color}" %>
+    <% end %>
+  </div>
+</div>
+<div class="start_index">
+<% @items.each do |item| %>
+  <div class= "item-card mt-5 mb-5">
+    <% if item.favorite? %>
+      <%= simple_form_for item, remote: true do |f| %>
+        <%= f.input :favorite, :input_html => { :checked => false, class: "hidden" }, label: false  %>
+        <%= button_tag class: "index-heart", type: 'submit' do %>
+          <i class="heart fas fa-heart" aria-hidden="true" ></i>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= simple_form_for item, remote: true do |f| %>
+        <%= f.input :favorite, :input_html => { :checked => true, class: "hidden"}, label: false %>
+        <%= button_tag class: "index-heart", type: 'submit' do %>
+          <i class="heart far fa-heart" aria-hidden="true" ></i>
+        <% end %>
+      <% end %>
+    <% end %>
+    <div>
+      <div class="outfit-text">
+          <%=  link_to "<p>Create outfit</p>".html_safe, item_path(item), class: "no-underline item-circle", id: "index-circle", style:" background-color: #{item.color}" %>
+      </div>
+    </div>
+    <%= image_tag item.image, class: "image-carousel"%>
+  </div>
+<% end %>
+</div>

@@ -7,19 +7,22 @@ class ItemsController < ApplicationController
     # added a sorting to make sure the most recently added items are displayed first .sort_by { |item| item.created_at }
     @items = Item.all
     @items = @items.order(:created_at)
-
+    @colors = @items.select(:color).pluck(:color).uniq
+    @favorite_colors = @items.where(favorite:true).select(:color).pluck(:color).uniq
      if params[:favorite]
       @items = @items.where(favorite:true)
     end
 
-    @color = params[:color]
     if params[:category]
       @category = Category.find_by_name(params[:category])
       @items = @items.where(category:@category)
     end
+
+    @color = params[:color]
     if @color
       @items = @items.where(color:@color)
     end
+
     @pagy, @records = pagy(@items, link_extra: "data-remote ='true'")
     @item = @records.last
   end
@@ -56,6 +59,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update!(item_params)
+    # will return to this later, see about adding an id and anchoring to it
     redirect_to items_path(category:@item.category.name, color:@item.color)
   end
 
@@ -64,7 +68,7 @@ class ItemsController < ApplicationController
     @new_item.user = current_user
     @new_item.category = Category.find_by_name(category_param)
     if @new_item.save!
-      redirect_to items_path
+      redirect_to item_path(@new_item)
     else
       @colors = Item.limit(9).pluck(:color)
       render :new
