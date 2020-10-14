@@ -1,7 +1,7 @@
 <% if @category %>
   <%= render "carousel"  %>
 <% elsif @color %>
-  <%= render "categories" %>
-<% else %>
   <%= render "colors" %>
+<% else %>
+  <%= render "shared/start_index" %>
 <% end %>

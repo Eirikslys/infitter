@@ -14,7 +14,7 @@
   <div class="tab-content">
     <div class="tab-pane active" id="recent" role="tabpanel" aria-labelledby="recent-tab">
       <div class="items-index">
-          <% @items.select(:color).pluck(:color).uniq.each do |color| %>
+          <% @colors.each do |color| %>
       <%= link_to items_path(color:color), class: "no-underline" do %>
         <div class="color" style="background-color: <%=color%>">
           <% if Item.where(color:color, favorite:true).exists? %>
@@ -29,7 +29,7 @@
     </div>
     <div class="tab-pane" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
       <div class="items-index">
-          <% @items.where(favorite:true).select(:color).pluck(:color).uniq.each do |color| %>
+          <% @favorite_colors.each do |color| %>
       <%= link_to items_path(color:color), class: "no-underline" do %>
         <div class="color" style="background-color: <%=color%>">
           <% if Item.where(color:color, favorite:true).exists? %>

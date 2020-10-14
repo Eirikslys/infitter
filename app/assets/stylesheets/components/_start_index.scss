@@ -1,0 +1,19 @@
+.start_index {
+  display: grid;
+  justify-items: center;
+  margin-top: 60px;
+}
+
+.index-heart {
+  position: relative;
+  left: 248px;
+  background-color: inherit;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+// created with some styling to prevent wonky positioning height-wise on the index page with all the item cards.
+#index-circle {
+  top: 0px;
+}
