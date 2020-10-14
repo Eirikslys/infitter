@@ -13,14 +13,16 @@ class ItemsController < ApplicationController
       @items = @items.where(favorite:true)
     end
 
-    @color = params[:color]
     if params[:category]
       @category = Category.find_by_name(params[:category])
       @items = @items.where(category:@category)
     end
+
+    @color = params[:color]
     if @color
       @items = @items.where(color:@color)
     end
+
     @pagy, @records = pagy(@items, link_extra: "data-remote ='true'")
     @item = @records.last
   end
@@ -57,6 +59,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update!(item_params)
+    # will return to this later, see about adding an id and anchoring to it
     redirect_to items_path(category:@item.category.name, color:@item.color)
   end
 

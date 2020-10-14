@@ -1,7 +1,12 @@
 .start_index {
   display: grid;
   justify-items: center;
-  margin-top: 60px;
+  margin-top: 0px;
+}
+
+.index-dropdown {
+  position: fixed;
+  z-index: 6;
 }
 
 .index-heart {
@@ -16,4 +21,13 @@
 // created with some styling to prevent wonky positioning height-wise on the index page with all the item cards.
 #index-circle {
   top: 0px;
+}
+
+#menu-icon {
+  // width: 34px;
+}
+
+.dropdown-box {
+  height: 35px;
+  width: 35px;
 }
