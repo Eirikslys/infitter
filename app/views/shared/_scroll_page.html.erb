@@ -1,8 +1,12 @@
-<div class="dropdown index-dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="dropdown index-dropdown" >
+  <button class="btn btn-secondary dropdown-toggle" style="background-color: <%= @color%>" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-filter"></i>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+    <%= link_to items_path, class: "dropdown-item" do %>
+      clear filters
+    <% end %>
 
     <%= link_to items_path(category:"accessories", color:@color),class: "dropdown-item" do %>
       accessories
@@ -15,19 +19,26 @@
     <%= link_to items_path(category:"bottoms", color:@color),class: "dropdown-item" do %>
       bottoms
     <% end %>
-    <div class="dropdown-box">
+    <% if @items.joins(:category).where(categories:{name:"shoes"}).exists? %>
       <%= link_to items_path(category:"shoes", color:@color),class: "dropdown-item" do %>
         shoes
       <% end %>
-    </div>
+    <% end %>
     <div class="dropdown-divider"></div>
     <% @colors.each do |color| %>
+    <% if  @items.where(color:color).exists?%>
+
       <%= link_to "&nbsp;".html_safe, items_path(color:color), class: "dropdown-item", style: "background-color: #{color}" %>
+    <% end %>
     <% end %>
   </div>
 </div>
-
 <div class="start_index">
+
+<% if @items.empty? %>
+  <h1>No items matching your filters</h1>
+<% end %>
+
 <% @items.each do |item| %>
   <div class= "item-card mt-5 mb-5">
     <% if item.favorite? %>

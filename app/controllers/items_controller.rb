@@ -9,7 +9,8 @@ class ItemsController < ApplicationController
     @items = @items.order(:created_at)
     @colors = @items.select(:color).pluck(:color).uniq
     @favorite_colors = @items.where(favorite:true).select(:color).pluck(:color).uniq
-     if params[:favorite]
+
+    if params[:favorite]
       @items = @items.where(favorite:true)
     end
 

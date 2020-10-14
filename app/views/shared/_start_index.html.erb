@@ -15,17 +15,17 @@
     <%= link_to items_path(category:"bottoms", color:@color),class: "dropdown-item" do %>
       bottoms
     <% end %>
-    <div class="dropdown-box">
-      <%= link_to items_path(category:"shoes", color:@color),class: "dropdown-item" do %>
-        shoes
-      <% end %>
-    </div>
+
+    <%= link_to items_path(category:"shoes", color:@color),class: "dropdown-item" do %>
+      shoes
+    <% end %>
     <div class="dropdown-divider"></div>
     <% @colors.each do |color| %>
       <%= link_to "&nbsp;".html_safe, items_path(color:color), class: "dropdown-item", style: "background-color: #{color}" %>
     <% end %>
   </div>
 </div>
+
 <div class="start_index">
 <% @items.each do |item| %>
   <div class= "item-card mt-5 mb-5">
