@@ -105,6 +105,15 @@ document.addEventListener("turbolinks:load", () => {
       console.log("click registered")
       document.querySelector(".step1").classList.add("hidden")
       document.querySelector(".step2").classList.remove("hidden")
+      document.querySelectorAll(".clr-ellipse").forEach((circleBtn)=>{
+        const color = document.querySelector("input[name='item[color]']:checked").value
+
+        circleBtn.style.backgroundColor = color
+
+
+
+
+      })
     })
   })
 
