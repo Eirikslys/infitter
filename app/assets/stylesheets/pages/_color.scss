@@ -62,6 +62,13 @@
     color: white !important;
     font-size: 34px;
 
+
+}
+
+.color-card.btn.selected .text-picker {
+  padding-top: 210px;
+
+
 }
 
 label {
@@ -83,5 +90,7 @@ label {
 .color-flex {
   position: relative;
   margin-bottom: 20px;
+  padding-right: 40px;
+
 }
 
