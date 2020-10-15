@@ -54,7 +54,11 @@ document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
 
+  setTimeout(() => {
+    const alert = document.querySelector(".alert")
+    alert.parentElement.removeChild(alert)
 
+  },4000)
   // This code will check if the current page is the items/new page, if it is not
   // the hidden class will be removed from the camera div and added to the content div
   // (see application.html.erb), then the image submission will be clicked in the formerly hidden

@@ -77,7 +77,7 @@ class ItemsController < ApplicationController
 
   def create
     @new_item = current_user.items.new(item_params)
-    @new_item.user = current_user.items
+    @new_item.user = current_user
     @new_item.category = Category.find_by_name(category_param)
     if @new_item.save!
       redirect_to item_path(@new_item)
