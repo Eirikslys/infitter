@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     # added a sorting to make sure the most recently added items are displayed first .sort_by { |item| item.created_at }
-    @items = Item.all
+    @items = current_user.items
     @items = @items.order(:created_at)
     @colors = @items.select(:color).pluck(:color).uniq
     @favorite_colors = @items.where(favorite:true).select(:color).pluck(:color).uniq
@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+
     # if params[:color]
     #   @color = params[:color]
     #   category = Category.find_by_name(params[:category])
@@ -47,6 +48,7 @@ class ItemsController < ApplicationController
     @next = @index >= 3 ? 0 : @index + 1
     @prev = @index <= 0 ? 3 : @index - 1
 
+
   end
 
   def destroy
@@ -58,24 +60,24 @@ class ItemsController < ApplicationController
 
 
   def new
-    @colors = Item.limit(9).pluck(:color)
-    @new_item = Item.new
+    @colors = current_user.items.limit(9).pluck(:color)
+    @new_item = current_user.items.new
   end
 
   def edit
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
     @item.update!(item_params)
     # will return to this later, see about adding an id and anchoring to it
     redirect_to items_path(category:@item.category.name, color:@item.color)
   end
 
   def create
-    @new_item = Item.new(item_params)
-    @new_item.user = current_user
+    @new_item = current_user.items.new(item_params)
+    @new_item.user = current_user.items
     @new_item.category = Category.find_by_name(category_param)
     if @new_item.save!
       redirect_to item_path(@new_item)
@@ -86,7 +88,7 @@ class ItemsController < ApplicationController
   end
 
   def color
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
   end
 
   private
