@@ -1,0 +1,46 @@
+.collapse-circle {
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  margin: 4px;
+}
+
+.collapse-button-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.collapse-container-circles {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: #3C3A3A;
+}
+
+.collapse-container-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #3C3A3A;
+
+}
+
+#collapse-button{
+  background-color: #3C3A3A;
+  border: none;
+  padding: 0px 25px;
+}
+
+.collapse-category {
+  background-color: #3C3A3A;
+  width: 120px;
+  height: 30px;
+  border: 1px solid;
+  border-color: white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 2px;
+}
