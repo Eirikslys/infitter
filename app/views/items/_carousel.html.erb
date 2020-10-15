@@ -22,20 +22,14 @@
     <div>
     </div>
     <%= image_tag @item.image, class: "image-carousel"%>
-    <% if @outfit[@index - 1] %>
-      <%=link_to item_path(@outfit[@index - 1]) do %>
-        <%= image_tag @outfit[@index - 1].image, class: "image-carousel front"%>
+
+      <%=link_to item_path(@item, index:@next, outfit:@ids) do %>
+        <%= image_tag @outfit[@next].image, class: "image-carousel front"%>
       <% end %>
-    <% end %>
-    <% if @outfit[@index + 1] %>
-      <%=link_to item_path(@outfit[@index + 1]) do %>
-        <%= image_tag @outfit[@index + 1].image, class: "image-carousel shadow"%>
+
+      <%= link_to item_path(@item, index:@prev, outfit:@ids) do %>
+        <%= image_tag @outfit[@prev].image, class: "image-carousel shadow"%>
       <% end %>
-    <% else %>
-      <%=link_to item_path(@outfit[0]) do %>
-        <%= image_tag @outfit[0].image, class: "image-carousel shadow"%>
-      <% end %>
-    <% end %>
   </div>
   <div>
   </div>

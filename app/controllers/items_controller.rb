@@ -29,16 +29,25 @@ class ItemsController < ApplicationController
   end
 
   def show
-    if params[:color]
-      @color = params[:color]
-      category = Category.find_by_name(params[:category])
-      @item = current_user.items.where(color:@color, category:category)
-    end
-    if params[:id]
-      @item = current_user.items.find(params[:id])
+
+    # if params[:color]
+    #   @color = params[:color]
+    #   category = Category.find_by_name(params[:category])
+    #   @item = Item.where(color:@color, category:category)
+    # end
+    if params.has_key?(:outfit)
+      @index = params[:index].to_i
+      @outfit = params[:outfit].map { |id| Item.find(id)}
+      @item = @outfit[@index]
+    else
+      @item = Item.find(params[:id])
       @outfit ? nil : @outfit = top_secret_matching_algorithm(@item)
       @index = @outfit.index(@item)
     end
+    @ids = @outfit.map { |item|  item.id}
+    @next = @index >= 3 ? 0 : @index + 1
+    @prev = @index <= 0 ? 3 : @index - 1
+
 
   end
 
