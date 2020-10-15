@@ -47,6 +47,7 @@ class ItemsController < ApplicationController
     @ids = @outfit.map { |item|  item.id}
     @next = @index >= 3 ? 0 : @index + 1
     @prev = @index <= 0 ? 3 : @index - 1
+    @previous_color = params[:color]
 
 
   end

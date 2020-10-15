@@ -7,6 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  transition: all 1s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
 
 }
