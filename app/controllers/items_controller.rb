@@ -29,16 +29,15 @@ class ItemsController < ApplicationController
   end
 
   def show
-    if params[:color]
-      @color = params[:color]
-      category = Category.find_by_name(params[:category])
-      @item = Item.where(color:@color, category:category)
-    end
-    if params[:id]
-      @item = Item.find(params[:id])
-      @outfit ? nil : @outfit = top_secret_matching_algorithm(@item)
-      @index = @outfit.index(@item)
-    end
+    # if params[:color]
+    #   @color = params[:color]
+    #   category = Category.find_by_name(params[:category])
+    #   @item = Item.where(color:@color, category:category)
+    # end
+
+    @item = Item.find(params[:id])
+    @outfit ? nil : @outfit = top_secret_matching_algorithm(@item)
+    @index = @outfit.index(@item)
   end
 
   def destroy
