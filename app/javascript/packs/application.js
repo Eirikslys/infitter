@@ -160,6 +160,7 @@ document.addEventListener("turbolinks:load", () => {
               event.currentTarget.parentElement.parentElement.classList.add(
                 "color-selected"
               );
+              document.querySelector(".color-match").classList.add("hidden")
               const buttons = document.querySelectorAll(".button-rectangle");
               console.log(buttons);
               buttons.forEach((button) => {
