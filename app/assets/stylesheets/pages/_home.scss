@@ -11,7 +11,7 @@
 
 .logo {
   padding-top: 30px;
-  margin-left: 45px;
+
 }
 
 .teal-container h2 {
@@ -43,8 +43,8 @@
   overflow: hidden;
 }
 
-#welcome .teal {
-  background-color: #21868c;
+#welcome .animation-backround {
+  animation: background 80s infinite;
   min-height: 100vh;
 }
 
