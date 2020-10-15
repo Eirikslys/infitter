@@ -39,6 +39,7 @@ class ItemsController < ApplicationController
       @outfit ? nil : @outfit = top_secret_matching_algorithm(@item)
       @index = @outfit.index(@item)
     end
+
   end
 
   def destroy

@@ -1,3 +1,6 @@
+<!--
+<div class="index-collapse-container">
+
 <div class="dropdown index-dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-filter"></i>
@@ -25,8 +28,51 @@
     <% end %>
   </div>
 </div>
+</div> -->
+<div class="collapse-button-container">
+  <p>
+    <button class="btn btn-primary" id="collapse-button" style="background-color: <%= @color %>" type="button" data-toggle="collapse" data-target="#collapseColor" aria-expanded="false" aria-controls="collapseColor">
+      Filter by color <i class="fas fa-angle-down rotate-icon"></i>
+    </button>
+    <button class="btn btn-primary" id="collapse-button" style="background-color: <%= @color %>" type="button" data-toggle="collapse" data-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
+      Filter by category <i class="fas fa-angle-down rotate-icon"></i>
+    </button>
+  </p>
+</div>
+<div class="collapse" id="collapseColor">
+  <div class="card card-body" style ="background-color: #3C3A3A">
+    <div class="collapse-container-circles">
+    <% @colors.each do |color| %>
+      <%= link_to "&nbsp;".html_safe, items_path(color:color), class: "collapse-circle", style: "background-color: #{color}" %>
+    <% end %>
+  </div>
+  </div>
+</div>
+<div class="collapse" id="collapseCategory">
+  <div class="card card-body" style="background-color: #3C3A3A">
+    <div class="collapse-container-categories">
+
+    <%= link_to items_path(category:"accessories", color:@color),class: "collapse-category" do %>
+      <p>accessories</p>
+    <% end %>
+
+    <%= link_to items_path(category:"tops", color:@color),class: "collapse-category" do %>
+      <p>tops</p>
+    <% end %>
+
+    <%= link_to items_path(category:"bottoms", color:@color),class: "collapse-category" do %>
+      <p>bottoms</p>
+    <% end %>
+
+    <%= link_to items_path(category:"shoes", color:@color),class: "collapse-category" do %>
+      <p>shoes</p>
+    <% end %>
+  </div>
+</div>
+</div>
 
 <div class="start_index">
+
 <% @items.each do |item| %>
   <div class= "item-card mt-5 mb-5">
     <% if item.favorite? %>
