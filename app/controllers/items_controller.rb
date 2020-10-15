@@ -36,7 +36,8 @@ class ItemsController < ApplicationController
     end
     if params[:id]
       @item = Item.find(params[:id])
-      @outfit = top_secret_matching_algorithm(@item)
+      @outfit ? nil : @outfit = top_secret_matching_algorithm(@item)
+      @index = @outfit.index(@item)
     end
   end
 
@@ -73,7 +74,6 @@ class ItemsController < ApplicationController
     else
       @colors = Item.limit(9).pluck(:color)
       render :new
-
     end
   end
 
