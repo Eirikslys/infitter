@@ -20,13 +20,6 @@
       <% end %>
     <% end %>
     <div>
-      <div class="outfit-text">
-        <% if @item.name %>
-          <%=  link_to "Create outfit", item_path(@item), class: "no-underline item-circle", style:" background-color: #{@item.color}" %>
-        <% else %>
-          <%=  link_to "Create outfit with this item #{@item.name}", item_path(@item), class: "no-underline item-circle", style:" background-color: #{@item.color}" %>
-        <% end %>
-      </div>
     </div>
     <%= image_tag @item.image, class: "image-carousel"%>
     <% if @outfit[@index - 1] %>
