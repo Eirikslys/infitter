@@ -149,7 +149,7 @@ document.addEventListener("turbolinks:load", () => {
             const colorName = (NameThatColor.name(color))
 
             const colorInput = `<div class="color-flex"><label class="color-card btn" style="background-color: ${color}", for="item_color_${color}">
-              ${colorName[1]}
+              <div class="text-picker">${colorName[1]}</div>
             </label></div>
             <input type="radio" name="item[color]" id="item_color_${color}" value="${color}">`;
             element.insertAdjacentHTML("beforeend", colorInput);

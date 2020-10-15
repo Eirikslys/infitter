@@ -61,10 +61,27 @@
     font-family: 'Inter', serif;
     color: white !important;
     font-size: 34px;
+
 }
 
 label {
   color: white;
   font-family: 'Inter', serif;
+  position: relative;
+
 
 }
+
+.text-picker {
+  top: 110px;
+  position: absolute;
+  width: 300px;
+
+
+}
+
+.color-flex {
+  position: relative;
+  margin-bottom: 20px;
+}
+
