@@ -54,6 +54,18 @@ document.addEventListener('swiped-right', function(e) {
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
+
+  const collapseButton = document.querySelectorAll(".collapse-button")
+  collapseButton.forEach((button) => {
+    let arrow = button.querySelector(".rotate-icon")
+    button.addEventListener("click", (event) => {
+      console.log(button)
+      arrow.classList.toggle("arrow-up")
+    })
+  })
+
+
+
    setTimeout(() => {
     const alert = document.querySelector(".alert")
     if (alert) {
