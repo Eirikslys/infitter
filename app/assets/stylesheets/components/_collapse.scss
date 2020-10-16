@@ -9,6 +9,7 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+
 }
 
 .collapse-container-circles {
@@ -32,6 +33,20 @@
   background-color: #3C3A3A;
   border: none;
   padding: 0px 25px;
+
+}
+
+
+
+// #collapse-button[aria-expanded="true"]::after {
+
+//   i {
+//     transform: rotateZ(-180deg);
+//   }
+// }
+
+.arrow-up {
+  transform: rotateZ(-180deg);
 }
 
 .collapse-category {
