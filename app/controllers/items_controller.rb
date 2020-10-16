@@ -95,12 +95,16 @@ class ItemsController < ApplicationController
   private
 
   def top_secret_matching_algorithm(item)
-    tops = Item.find_by(category:Category.find_by_name("tops"))
-    bottoms = Item.find_by(category:Category.find_by_name("bottoms"))
-    shoes = Item.find_by(category:Category.find_by_name("shoes"))
-    accessories = Item.find_by(category:Category.find_by_name("accessories"))
+    tops = Item.where(category:Category.find_by_name("tops"))
+    bottoms = Item.where(category:Category.find_by_name("bottoms"))
+    shoes = Item.where(category:Category.find_by_name("shoes"))
+    accessories = Item.where(category:Category.find_by_name("accessories"))
     array = []
-    [accessories, tops, bottoms, shoes].map do |i|
+    top = tops.sample
+    bottom = bottoms.sample
+    shoe = shoes.sample
+    acessory = accessories.sample
+    [acessory, top, bottom, shoe].map do |i|
       i.category == item.category ? array << item : array << i
     end
     array
