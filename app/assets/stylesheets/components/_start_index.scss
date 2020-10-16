@@ -4,6 +4,10 @@
   margin-top: 0px;
 }
 
+.modal-backdrop {
+  z-index: 6;
+}
+
 .index-dropdown {
   position: fixed;
   z-index: 6;
