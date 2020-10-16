@@ -56,21 +56,24 @@ document.addEventListener("turbolinks:load", () => {
   // initSelect2();
    setTimeout(() => {
     const alert = document.querySelector(".alert")
-    alert.parentElement.removeChild(alert)
+    if (alert) {
+      alert.parentElement.removeChild(alert)
+    }
   },4000)
 
 
-const color = document.getElementById("previous_color").getAttribute("data-url")
-const containerCarousel = document.querySelector(".container-adaptive")
-const front = document.querySelector(".front")
-const shadow = document.querySelector(".shadow")
-setTimeout(() => {
-  containerCarousel.style.background = color;
-  console.log(color);
-}, 100 )
-console.log()
+  const containerCarousel = document.querySelector(".container-adaptive")
+  if (containerCarousel) {
+    const color = document.getElementById("previous_color").getAttribute("data-url")
+    const front = document.querySelector(".front")
+    const shadow = document.querySelector(".shadow")
+    setTimeout(() => {
+      containerCarousel.style.background = color;
+      console.log(color);
+    }, 100 )
+    console.log()
+  }
 
- 
   // This code will check if the current page is the items/new page, if it is not
   // the hidden class will be removed from the camera div and added to the content div
   // (see application.html.erb), then the image submission will be clicked in the formerly hidden
@@ -104,7 +107,6 @@ console.log()
         console.log("link")
       })
     }
-
   }
 
   const cameraFunc = (camera) => {
