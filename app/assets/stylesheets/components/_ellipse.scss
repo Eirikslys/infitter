@@ -4,40 +4,16 @@
   align-items: center;
   justify-content: space-around;
 
+
 }
 
 .ellipse {
   position: relative;
   width: 297px;
   height: 297px;
-  background: rgb(78, 212, 237);
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.03));
-  border-radius: 100%;
-    background: linear-gradient(150deg, #93eed6, #56d4b2, #3acaa3, #1daa84, #13906e, #aadee1, #70dbe1, #31b7bf, #21868c, #0b575c, #e6b8e3, #df6fd7, #c52e9e, #e35a8f, #e35a8f, #f2b5ba, #ee8c94, #ee3d4c, #94111c, #eef58b, #f3fd6a, #f0fd45, #c3d208, #f7ca95, #f3b061, #f79623, #f38707, #f38707, #dbf3c3, #b6ea81, #a2ea81, #6bc542, #38a706);
-    background-size: 6600% 6600%;
-
-    -webkit-animation: AnimationName 150s ease infinite;
-    -moz-animation: AnimationName 150s ease infinite;
-    animation: AnimationName 150s ease infinite;
+  border-radius: 50%;
+  animation: background 80s infinite;
 }
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
-
 
 
 .ellipse .fas {
@@ -76,5 +52,114 @@ text-align: center;
 color: #FFFFFF;
 padding-left: 50px;
 padding-right: 50px;
+padding-top: 25px;
+}
 
+.wrapper-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@keyframes background {
+    0% {
+        background: #93eed6;
+    }
+    3% {
+        background: #56d4b2;
+    }
+    6% {
+        background: #3acaa3;
+    }
+    9% {
+        background: #1daa84;
+    }
+    12% {
+        background: #13906e;
+    }
+    15% {
+        background: #5b8e7d;
+    }
+    18% {
+        background: #70dbe1;
+    }
+    21% {
+        background: #31b7bf;
+    }
+    24% {
+        background: #21868c;
+    }
+    27% {
+        background: #0b575c;
+    }
+    30% {
+        background: #e6b8e3;
+    }
+    33% {
+        background: #c52e9e;
+    }
+    36% {
+        background: #e35a8f;
+    }
+    39% {
+        background: #e35a8f;
+    }
+    42% {
+        background: #f2b5ba;
+    }
+    45% {
+        background: #ee8c94;
+    }
+    48% {
+        background: #ee3d4c;
+    }
+    51% {
+        background: #94111c;
+    }
+    54% {
+        background: #eef58b;
+    }
+    57% {
+        background: #f3fd6a;
+    }
+    60% {
+        background: #f0fd45;
+    }
+    63% {
+        background: #f0fd45;
+    }
+    66% {
+        background: #c3d208;
+    }
+    69% {
+        background: #f7ca95;
+    }
+    72% {
+        background: #f3b061;
+    }
+    75% {
+        background: #f79623;
+    }
+    78% {
+        background: #f38707;
+    }
+    81% {
+        background: #f38707;
+    }
+    84% {
+        background: #dbf3c3;
+    }
+    87% {
+        background: #b6ea81;
+    }
+    90% {
+        background: #a2ea81;
+    }
+    93% {
+        background: #6bc542;
+    }
+    96% {
+        background: #38a706;
+    }
 }
