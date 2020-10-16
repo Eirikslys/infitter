@@ -1,21 +1,28 @@
 <!--  see components/_backgrounds.scss for the rules for this container  -->
-<div class="container-adaptive" style="background-color: <%= @item.color %>">
-<!--   rules for this heart is in _heart.scss -->
 
+<% if @previous_color %>
+  <div class="container-adaptive" id="container-adaptive" style="background: <%= @previous_color %>">
+<% else %>
+  <div class="container-adaptive" id="container-adaptive" style="background: <%= @item.color %>">
+<% end %>
+<!--   rules for this heart is in _heart.scss -->
+<% if @previous_color %>
+  <div class="hidden" id="previous_color" data-url="<%= @item.color %>" style="background-color: <%= @previous_color %>"></div>
+<% end %>
 
   <div class= "item-card">
     <% if @item.favorite? %>
       <%= simple_form_for @item do |f| %>
         <%= f.input :favorite, :input_html => { :checked => false, class: "hidden" }, label: false  %>
-        <%= button_tag class: "knapp", style: "background-color: #{@item.color}", type: 'submit' do %>
-          <i class="heart fas fa-heart heartbutton" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
+        <%= button_tag class: "knapp", style: "background-color: transparent", type: 'submit' do %>
+          <i class="heart fas fa-heart heartbutton" aria-hidden="true" style="background-color: transparent" ></i>
         <% end %>
       <% end %>
     <% else %>
       <%= simple_form_for @item do |f| %>
         <%= f.input :favorite, :input_html => { :checked => true, class: "hidden"}, label: false %>
-        <%= button_tag class: "knapp", style: "background-color: #{@item.color}", type: 'submit' do %>
-          <i class="heart far fa-heart heartbutton" aria-hidden="true" style="background-color: <%= @item.color %>" ></i>
+        <%= button_tag class: "knapp", style: "background-color: transparent", type: 'submit' do %>
+          <i class="heart far fa-heart heartbutton" aria-hidden="true" style="background-color: transparent" ></i>
         <% end %>
       <% end %>
     <% end %>
@@ -23,13 +30,15 @@
     </div>
     <%= image_tag @item.image, class: "image-carousel"%>
 
-      <%=link_to item_path(@item, index:@next, outfit:@ids) do %>
+      <%=link_to item_path(@item, index:@next, outfit:@ids, color:@item.color) do %>
         <%= image_tag @outfit[@next].image, class: "image-carousel front"%>
       <% end %>
 
-      <%= link_to item_path(@item, index:@prev, outfit:@ids) do %>
+
+      <%= link_to item_path(@item, index:@prev, outfit:@ids, color:@item.color) do %>
         <%= image_tag @outfit[@prev].image, class: "image-carousel shadow"%>
       <% end %>
+
   </div>
   <div>
   </div>

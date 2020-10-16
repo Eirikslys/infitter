@@ -5,6 +5,10 @@
     <title><%= meta_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- line of code below was added to prevent ui flickering on carousel because of turbolinks caching
+    for more information see: https://stackoverflow.com/questions/39864617/rails-turbolinks-5-causing-causing-ui-flicker
+    -Eirik -->
+    <meta name="turbolinks-cache-control" content="no-cache">
 
     <meta name="description" content="<%= meta_description %>">
 
