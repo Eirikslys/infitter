@@ -58,11 +58,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', serif;
+    font-family: 'Inter', sans-serif;
     color: white !important;
     font-size: 34px;
-
-
+    position: relative;
+    margin-bottom: 75px;
 }
 
 .color-card.btn.selected .text-picker {
@@ -83,14 +83,10 @@ label {
   top: 110px;
   position: absolute;
   width: 300px;
+  font-family: 'Inter', sans-serif;
 
 
-}
-
-.color-flex {
-  position: relative;
-  margin-bottom: 20px;
-  padding-right: 40px;
 
 }
+
 
