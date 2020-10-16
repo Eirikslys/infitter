@@ -25,6 +25,14 @@
   outline: 0;
 }
 
+.modal-dialog {
+  z-index: 6;
+}
+
+.modal-backdrop {
+  z-index:-1;
+}
+
 .popup-title {
   color: #FFFFFF;
   text-align: center;
